@@ -1,0 +1,52 @@
+<div class="staffer">
+
+    <div class="staffer-item" id="staffer-left">
+        {% if page.meta.photo %}
+        <img class="staffer-image" src="{{ ('/staff/images/' ~ page.meta.photo) | url }}"
+            alt="Photo of {{ page.meta.name }}">
+        {% endif %}
+
+
+        {% if page.meta.oh %}
+        <div class="office-hours">
+            <p><b>Office Hours</b></p>
+            {% for oh in page.meta.oh %}
+            <div>{{ oh }}</div>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+    </div>
+    <div class="staffer-item" id="staffer-right">
+        <p>
+            <span class="staffer-name">
+                {{ page.meta.name }}
+                {% if page.meta.website %}
+                <a href="{{ page.meta.website }}" target="_blank"><i class="fa fa-home" aria-hidden="true"></i></a>
+                {% endif %}
+            </span>
+            {% if page.meta.pronouns %}<span class="staffer-pronouns">{{ page.meta.pronouns }}</span>{% endif %}
+        </p>
+
+        {% if page.meta.email or page.meta.meeting %}
+        <p>
+            {% if page.meta.email %}
+            <!-- research (TM) shows that converting mailto links into HTML entities reduce spam -->
+            {% set email_link = page.meta.email | replace('@', '&commat;') | replace('.', '&#x0002E;') %}
+            {% set email_text = page.meta.email | replace('cs.washington.edu', 'cs') | replace('uw.edu', 'uw') %}
+            <a href="&#x6D;&#x61;&#x69;&#x6C;&#x74;&#x6F;&colon;{{ email_link }}">{{ email_text }}</a>
+            {% endif %}
+
+            {% if page.meta.meeting %}<a href="{{ page.meta.meeting }}" class="btn btn-373 m-3 mt-4">Schedule 1:1
+                Meeting</a>{% endif %}
+        </p>
+        {% endif %}
+
+        {% if page.meta.section %}<p class="staffer-role">Quiz Section: {{ page.meta.section }}</p>{% endif %}
+        {% if page.meta.display_role %}<p class="staffer-role">{{ page.meta.role }}</p>{% endif %}
+
+        <div class="staffer-content">
+            {{ page.content }}
+        </div>
+    </div>
+</div>

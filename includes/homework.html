@@ -1,0 +1,36 @@
+<div class="hw-assignment" id="hw-{{hw_num}}">
+    <div><b>HW{{hw_num}} - {{ hw.title }}</b> ({{ hw.points }} point{{ "s" if hw.points > 1 else ""}})</div>
+    <p><b>Due {{ hw.end.strftime("%A %m/%d") }} at {{ hw.due }}.</b> No late submissions accepted.</p>
+
+    {% if hw.note %}
+        <p><em>Note: {{ hw.note }}</em></p>
+    {% endif %}
+
+    {% if hw.submit %}
+        {% set submit_name, submit_url = hw.submit.items() | first %}
+        <p>Submission: <a href="{{ submit_url }}">{{ submit_name }}</a></p>
+    {% endif %}
+    {% if hw.url %}
+        <p>Specification: <a href="{{ hw.url | url}}">Spec</a></p>
+    {% endif %}
+
+    {% if hw.files %}
+        <div>Files:</div>
+        <ul>
+            {% for title, file_url in hw.files.items() %}
+                <li><a href="{{ file_url | url }}">{{ title }}</a></li>
+            {% endfor %}
+        </ul>
+        <p>You can get any of these files by right-clicking to "Copy Link Address" and then in your terminal typing <code>wget &lt;URL&gt;</code>.</p>
+    {% endif %}
+
+    {% if hw.useful_links %}
+        <div>Useful Links:</div>
+        <ul>
+            {% for title, url in hw.useful_links.items() %}
+                <li><a href="{{ url }}">{{ title }}</a></li>
+            {% endfor %}
+        </ul>
+
+    {% endif %}
+</div>

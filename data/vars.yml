@@ -1,0 +1,7 @@
+vars: # Make sure to update links in mkdocs.yml too!
+  gradescope: https://www.gradescope.com/courses/759998
+  canvas: 
+  ed: https://edstem.org/us/courses/57688/discussion/
+  zoom: 
+  canvas_calendar: 
+  site_url: https://kengchichang.github.io/poli-179

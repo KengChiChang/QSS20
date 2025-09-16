@@ -1,0 +1,118 @@
+site_name: POLI 179
+site_url: https://kengchichang.github.io/poli-179
+
+docs_dir: src
+
+theme:
+  name: null
+  custom_dir: theme
+
+  static_templates:
+    - 404.html
+
+  include_search_page: false
+  search_index_only: false
+
+  navigation_depth: 3
+
+  favicon: false
+
+  external_links:
+    "📖 Syllabus": https://docs.google.com/document/d/1TNG2gTqD7MPyn7BU6nCK2p5dgvczRbrdA45b9vKb7EM/edit?usp=sharing
+    "💬 Ed Discussion": https://edstem.org/us/courses/57688/discussion/
+    "💯 Gradescope": https://www.gradescope.com/courses/759998
+    "💻 Colab": http://colab.research.google.com
+    "🖥️ Datahub": https://datahub.ucsd.edu/
+
+  nav_footer_content: "[Acknowledgements](acknowledgements.md)"
+
+  simple_analytics: false
+
+  shortcuts:
+    help: 191    # ?
+    next: 78     # n
+    previous: 80 # p
+    search: 83   # s
+
+markdown_extensions:
+  - pymdownx.extra
+  - admonition
+  - codehilite:
+      linenums: true
+  - sane_lists
+  - smarty:
+      smart_angled_quotes: true
+  - toc:
+      marker: "" # disable, since theme has its own TOC
+      permalink: true
+      toc_depth: "2-6"
+  - markdown_katex
+  - pymdownx.tilde
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_alt
+  - pymdownx.escapeall:
+      hardbreak: true
+  - pymdownx.smartsymbols
+  - pymdownx.highlight:
+      linenums_style: pymdownx-inline\
+
+# TODO: consider more plugins from https://facelessuser.github.io/pymdown-extensions/
+#   keys, caret
+
+plugins:
+  - search
+  - exclude:
+      glob: []
+  - append-to-pages:
+      # Note: "CSE" must be after "CSE X" entries in order for the latter to get caught
+      prepend: |
+        *[ADT]:
+        *[ADTs]:
+        *[AVL]:
+        *[CS]:
+        *[CSE 143]:
+        *[CSE 391]:
+        *[CSE]:
+        *[DRS]:
+        *[EX1]:
+        *[EX2]:
+        *[EX3]:
+        *[EX4]:
+        *[GPA]:
+        *[GPAs]:
+        *[IDE]:
+        *[IDEs]:
+        *[MOSS]:
+        *[NP]:
+        *[P1]:
+        *[P2]:
+        *[P3]:
+        *[P4]:
+        *[P]:
+        *[P0]:
+        *[PDF]:
+        *[TA]:
+        *[TAs]:
+        *[UW]:
+  - markdown-filter
+  - bootstrap-tables
+  - collections: # must load before macros
+      collections:
+        announcements: {}
+        staff: {}
+  - auto-nav
+  - macros:
+      include_dir: includes
+      include_yaml:
+        - data/vars.yml
+        - data/schedule/lectures.yml
+        - data/schedule/exercises.yml
+        - data/schedule/projects.yml
+  - sass
+  - url-validation
+  - minify:
+      minify_html: true
+      minify_js: false
+      htmlmin_opts:
+        remove_comments: true

@@ -1,0 +1,223 @@
+schedule:
+  start: 2024-4-1 # Shared across all schedule files
+  start_indices:
+    lecture: 1
+  dummy_days: # The calendar script needs to know when to make things weekends
+    - 155
+  defaults:
+    lecture:
+      resources: # Links always relative to schedule's page
+        lesson:
+          gslides: null
+        resources:
+          "Notes": "/resources.md/#week{num}"
+        schedule:
+          gsheets: null
+  styles:
+    resources:
+      pre-class:
+        resource-links:
+          - btn-group
+        resource-link:
+          - btn
+          - btn-resource
+      lesson:
+        resource-links:
+          - btn-group
+        resource-link:
+          - btn
+          - btn-resource
+      resources:
+        resource-links:
+          - btn-group
+        resource-link:
+          - btn
+          - btn-resource
+      schedule:
+        resource-links:
+          - btn-group
+        resource-link:
+          - btn
+          - btn-resource
+  weeks:
+  lectures:
+    days: ["Mon", "Tue", "Thu", "Fri"]
+    default_type: lecture
+    entries:
+      - title: ""
+        is_dummy: true
+      - title: "Syllabus, Deep Learning Landscape"
+        resources:
+          lesson:
+            gslides: https://docs.google.com/presentation/d/10pd1ZAWoJGVYwdXPBmxUaiLZD4PT1pRtZ6ELQ_CkXbk/edit?usp=sharing
+          resources: null
+          schedule: null
+      - title: "Python Prefresher, GitHub"
+        resources:
+          lesson:
+            gslides: https://docs.google.com/presentation/d/1MkPc_skqtCFMJUOkFGILOnJ3Lzum_TIjpPZ1mYy12oQ/edit?usp=sharing
+            notebook: https://colab.research.google.com/drive/1L8GGYQekC425KpB4QHrJgmk42zr07kvt?usp=sharing
+          resources: null
+          schedule: null
+      - title: ""
+        is_dummy: true
+      - title: ""
+        is_dummy: true
+      - title: "Word Embeddings, Dimension Reduction"
+        resources:
+          lesson:
+            gslides: https://docs.google.com/presentation/d/1Pe3KDEVbjJidhRLrxa3uj31bOUbeLdbgepY7A8H0XXo/edit?usp=sharing
+            notebook: https://colab.research.google.com/drive/1thpqaxAubLsQsL2M6WhS7yO-07uxNwCL?usp=sharing
+          resources: null
+          schedule: null
+      - title: "More Word Embeddings"
+        resources:
+          lesson: 
+            gslides: https://docs.google.com/presentation/d/1k95jIZSEZ04azrb2Cc0Yvs_v6soNfoxoYIF29CDQ_SU/edit?usp=sharing
+            notebook1: https://drive.google.com/file/d/11BcU5tIWFt_85xEINUbCEIN0tJZG6qXi/view?usp=sharing
+            notebook2: https://colab.research.google.com/drive/1gtmXv8pWoXaik0yMiQEAvUdwhUpw0PK1?usp=sharing
+          resources: null
+          schedule: null
+      - title: ""
+        is_dummy: true
+      - title: ""
+        is_dummy: true
+      - title: "Neural Networks, Image Classification"
+        resources:
+          lesson: 
+            gslides: https://docs.google.com/presentation/d/16jx2S81FnirHU41o1YhTLfNaweEfsLBdguEOMyP9wWY/edit?usp=sharing
+          resources: null
+          schedule: null
+      - title: "Image Embeddings, Clustering, kNN"
+        resources:
+          lesson: 
+            gslides: https://docs.google.com/presentation/d/1sXv7UyXFbIYUEvb2jQXOetTjKEh598S9zK8NwkJ4aTo/edit?usp=sharing
+            notebook1: https://colab.research.google.com/drive/1Z-Y20W5Mm-ZKBETlrez7-MuRevzaHVdd?usp=sharing
+            notebook2: https://colab.research.google.com/drive/1CQjdZchSHbPpLhXlQQenvxPkFwiLHQj5?usp=sharing
+          resources: null
+          schedule: null
+      - title: ""
+        is_dummy: true
+      - title: ""
+        is_dummy: true
+      - title: "Convolutional Networks, Image Segmentation; Project Guidelines"
+        resources:
+          lesson: 
+            gslides: https://docs.google.com/presentation/d/1jFW2RCv_ja55g0XPHX0UHXOgS_AANd4ZeKrhWntvatk/edit?usp=sharing
+            notebook1: https://colab.research.google.com/drive/1hYdHHXJdJLw3EPOSzLzoHZsLSoJ480vv?usp=sharing
+            notebook2: https://colab.research.google.com/drive/1523hMkGqZuK9QSfyYdkj2yrQiZdNOTsi?usp=sharing
+          resources: null
+          schedule: null
+      - title: "Transformers; Hugging Face"
+        resources:
+          lesson: 
+            gslides: https://docs.google.com/presentation/d/1SlCmyqA6d8KvXd7Umvib3cHFqJyW_gOnQDnGWGFuP40/edit?usp=sharing
+          resources: null
+          schedule: null
+      - title: ""
+        is_dummy: true
+      - title: ""
+        is_dummy: true
+      - title: "Transformers Implementations; Group Matching Activity"
+        resources:
+          lesson: 
+            gslides: https://docs.google.com/presentation/d/1VnDmPi1v_TLQ_0IZldzynNmo059hQ3EOb_xAqForgac/edit?usp=sharing
+            notebook1: https://colab.research.google.com/drive/1icaCgxGDuNNofkuTzhpXjaMIMEbXfaWU?usp=drive_link
+          resources: null
+          schedule: null
+      - title: "GPTs; Research Projects"
+        resources:
+          lesson: 
+            gslides: https://docs.google.com/presentation/d/1ZnUx6jXQocBzCroZDDOPkmiP1PA5Eht8N4UdB6EFaWs/edit?usp=sharing
+            notebook1: https://colab.research.google.com/drive/1YNzXI4l9KZBowYZYXIzQ2HUBFHKz0Lmo?usp=sharing
+          resources: null
+          schedule: null
+      - title: ""
+        is_dummy: true
+      - title: ""
+        is_dummy: true
+      - title: "Contrastive Learning & Multimodality"
+        resources:
+          lesson: 
+            gslides: https://docs.google.com/presentation/d/1NfVnl7sVbxWraNqGb2KEjRFi8Ie7gJwMn0W2bW5nSXM/edit?usp=sharing
+            notebook1: https://colab.research.google.com/drive/1yMZ2Fvx3ykeecBo8Y0vrIAT_jxiTxr6A?usp=sharing
+          resources: null
+          schedule: null
+      - title: "Project Proposal Lightning Talks"
+        resources:
+          lesson: null
+          resources: null
+          schedule:
+            gsheets: https://docs.google.com/spreadsheets/d/1YZMTr0lytPS97S1cF931OuI3ThMKX73pBi4KJ90JhAQ/edit#gid=0
+      - title: ""
+        is_dummy: true
+      - title: ""
+        is_dummy: true
+      - title: "Applications Presentation: Text I"
+        resources:
+          lesson: 
+            gslides: https://docs.google.com/presentation/d/1T-wfsxy3fAR_MhErBWCiTzyMXe6s43AQy2RZLKcT_AY/edit?usp=sharing
+          resources: null
+          schedule: 
+            gsheets: https://docs.google.com/spreadsheets/d/1lh9-Yu-zBs6BqaagBn9qmSDduCsA6D5P9rx9AWSDPmQ/edit#gid=0
+      - title: "Applications Presentation: Text II"
+        resources:
+          lesson: null
+          resources: null
+          schedule: 
+            gsheets: https://docs.google.com/spreadsheets/d/1lh9-Yu-zBs6BqaagBn9qmSDduCsA6D5P9rx9AWSDPmQ/edit#gid=0
+      - title: ""
+        is_dummy: true
+      - title: ""
+        is_dummy: true
+      - title: "Applications Presentation: Images I"
+        resources:
+          lesson: 
+            gslides: https://docs.google.com/presentation/d/1xax1tTees5vvMbbMfeAgAQ__zmLzyv7_SMEBsxsPFjk/edit?usp=sharing
+          resources: null
+          schedule: 
+            gsheets: https://docs.google.com/spreadsheets/d/1lh9-Yu-zBs6BqaagBn9qmSDduCsA6D5P9rx9AWSDPmQ/edit#gid=0
+      - title: "Applications Presentation: Images II"
+        resources:
+          lesson: null
+          resources: null
+          schedule: 
+            gsheets: https://docs.google.com/spreadsheets/d/1lh9-Yu-zBs6BqaagBn9qmSDduCsA6D5P9rx9AWSDPmQ/edit#gid=0
+      - title: ""
+        is_dummy: true
+      - title: ""
+        is_dummy: true
+      - title: "Project Peer Review Session"
+        resources:
+          lesson: 
+            gslides: https://docs.google.com/presentation/d/1pxzT8Ru7zdLzUVaL8ph0GYCUxUiGHQQx6OyqwsUxLOE/edit?usp=sharing
+          resources: null
+          schedule: 
+            gsheets: https://docs.google.com/spreadsheets/d/12B_ZA3Kgt3WusWFxYUyspw9kUFrIBRe-ahWXcQBvxuE/edit#gid=1144830075
+      - title: "Final Project Milestone Presentation"
+        resources:
+          lesson: null
+          resources: null
+          schedule: 
+            gsheets: https://docs.google.com/spreadsheets/d/13WIxdRR1Q1SO5a4Ecv5GG6Aet3lL1W0ARxp1rXWoD58/edit?usp=sharing
+      - title: ""
+        is_dummy: true
+      - title: ""
+        is_dummy: true
+      - title: "Final Project Milestone Presentation"
+        resources:
+          lesson: null
+          resources: null
+          schedule: 
+            gsheets: https://docs.google.com/spreadsheets/d/13WIxdRR1Q1SO5a4Ecv5GG6Aet3lL1W0ARxp1rXWoD58/edit?usp=sharing
+      - title: "No In-person Class; Virtual Project Help and Feedback Session"
+        resources:
+          lesson: null
+          resources: null
+          schedule: null
+      - title: ""
+        is_dummy: true
+      - title: ""
+        is_dummy: true
+      - title: ""
+        is_dummy: true

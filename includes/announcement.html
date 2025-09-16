@@ -1,0 +1,18 @@
+{% if not announcement.meta.hide %}
+
+<div class="announcement">
+  <details {%- if expand %} open{% endif %}>
+    <summary class="announcement-header">
+      <span class="announcement-header-label label-373">{{ announcement.meta.date.strftime('%b %d') }}</span>
+      <h2 class="announcement-title">{{ announcement.title }}</h2>
+    </summary>
+    <div class="announcement-body">
+      {{ announcement.content }}
+
+      {% if announcement.meta.ed_url %}
+        <a href="{{ announcement.meta.ed_url }}">See the full announcement on Ed!</a>
+      {% endif %}
+    </div>
+  </details>
+</div>
+{% endif %}

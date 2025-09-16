@@ -1,0 +1,80 @@
+@import "variables";
+
+.staffer {
+    display: flex;
+    @media screen and (max-width: 576px) {
+        display: block;
+    }
+
+    padding: 0.5em;
+
+    p {
+        margin-bottom: 0.5em;
+    }
+
+    #staffer-left {
+        flex-basis: calc(#{$staff-photo-diameter} + 6em);
+        text-align: center;
+        padding: 0 1rem 0 1rem;
+        p {
+            margin-bottom: 0.25em;
+        }
+        .staffer-name {
+            font-weight: 500;
+        }
+    }
+    #staffer-right {
+        flex-basis: calc(100% - #{$staff-photo-diameter} - 4em);
+    }
+
+    .office-hours {
+        margin-top: 3em;
+    }
+
+    .staffer-name {
+        font-weight: bold;
+    }
+
+    .staffer-pronouns {
+        display: inline-block;
+        padding-top: 0.16em;
+        padding-right: 0.56em;
+        padding-bottom: 0.16em;
+        padding-left: 0.56em;
+        margin-right: .5rem;
+        margin-left: .5rem;
+        text-transform: uppercase;
+        vertical-align: middle;
+        background-color: $holiday-cal-bg;
+        font-size: 11px !important;
+        border-radius: 12px;
+    }
+
+    .staffer-role {
+        color: #767575;
+    }
+
+    .staffer-content {
+        margin-top: 1em;
+    }
+}
+
+.staffer-image {
+    border-radius: 50%;
+    border: 0px solid white;
+    width: $staff-photo-diameter;
+    height: $staff-photo-diameter;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+h2:not(:first-of-type) {
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.role {
+    hr {
+        width: 90%;
+    }
+}

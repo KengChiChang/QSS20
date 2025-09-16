@@ -1,0 +1,171 @@
+{% from 'vars.html' import parents with context %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      {%- block site_meta %}
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% if page and page.is_homepage %}<meta name="description" content="{{ config['site_description'] }}">{% endif %}
+        {% if config.site_author %}<meta name="author" content="{{ config.site_author }}">{% endif %}
+        {% if page and page.canonical_url %}<link rel="canonical" href="{{ page.canonical_url }}">{% endif %}
+        {% if config.theme.favicon %}
+        <link rel="shortcut icon" href="{{ 'img/favicon.ico'|url }}">
+        {% endif %}
+      {%- endblock %}
+
+      {%- block htmltitle %}
+        <title>{% if page and page.title and not page.is_homepage %}{{ page.title }} - {% endif %}{{ config.site_name }}</title>
+      {%- endblock %}
+
+      {%- block styles %}
+        <!-- fonts -->
+        <link rel="stylesheet" href="https://courses.cs.washington.edu/courses/cse373/tools/fonts/inter/inter.css">
+        <link href="{{ 'css/base.scss'|url }}" rel="stylesheet">
+        <link href="{{ 'css/font-awesome.min.css'|url }}" rel="stylesheet">
+
+        {%- for path in config['extra_css'] %}
+        <link href="{{ path|url }}" rel="stylesheet">
+        {%- endfor %}
+        {%- for path in (page.meta['extra_css'] if page else []) %}
+        <link href="{{ path|url }}" rel="stylesheet">
+        {%- endfor %}
+      {%- endblock %}
+
+      {%- block extrahead %} {% endblock %}
+    </head>
+
+    <body{% if page and page.is_homepage %} class="homepage"{% endif %} data-spy="scroll" data-target="#toc" data-offset="100">
+        <div class="navbar fixed-top d-lg-none navbar-light">
+
+            <div>
+                {%- if nav|length > 1 %}
+                <!-- Expander button -->
+                    {%- block navbar_nav_toggler %}
+                    <button type="button" class="navbar-toggler align-top mr-2" data-toggle="collapse" data-target="#cse373-site-nav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    {%- endblock %}
+                {%- endif %}
+
+                {%- block navbar_site_name %}
+                    <a class="navbar-brand" href="{{ nav.homepage.url|page_url }}">{{ config.site_name }}</a>
+                {%- endblock %}
+            </div>
+
+            <!-- Expanded navigation -->
+            <div id="navbar-collapse" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav ml-auto">
+                  {%- block search_button %}
+                    {%- if 'search' in config['plugins'] %}
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                            <i class="fa fa-search"></i> Search
+                        </a>
+                    </li>
+                    {%- endif %}
+                  {%- endblock %}
+                </ul>
+            </div>
+
+            <!-- TOC toggler -->
+            {% block navbar_toc_toggler %}
+                <div class="navbar-expand-md">
+                    <button type="button" class="navbar-toggler" data-toggle="show" data-target=".before-main" title="Table of Contents">
+                        <span class="fa fa-angle-down"></span>
+                    </button>
+                </div>
+            {% endblock %}
+        </div>
+        <div class="container-fluid">
+            <div class="row navbar-expand-lg">
+
+                {%- block site_nav %}
+                    {%- if nav|length>1 %}
+                        <nav id="cse373-site-nav" class="col-lg sticky-sidebar-lg flex-column align-items-stretch collapse navbar-collapse thin-scrollbar">
+                            <a class="navbar-brand d-none d-lg-block cse373-brand-container" href="{{ nav.homepage.url|page_url }}">
+                                {{ config.site_name }}
+                            </a>
+                            <!-- Main navigation -->
+                            {% include "nav.html" %}
+
+                            {# 0 x-margins needed to display in flex: https://stackoverflow.com/a/34372979 #}
+                            <!-- <hr class="mx-0"> -->
+                            <!-- <span class="h5 navbar-header">
+                                <a href="{{ '/course_tools.md' | url }}">Course Tools  <small><i class="fa fa-external-link text-muted" aria-hidden="true"></i></small></a>
+                            </span> -->
+                            <ul class="nav nav-pills flex-column">
+                                {%- for name, link_url in config.theme.external_links.items() %}
+                                    <li class="nav-item">
+                                        <a href="{{ link_url | url }}" class="nav-link">{{ name }}</a>
+                                    </li>
+                                {%- endfor %}
+                            </ul>
+
+                            {%- block nav_footer %}
+                            <footer class="mt-auto">
+                                {{ config.theme.nav_footer_content | markdown }}
+                            </footer>
+                            {%- endblock %}
+                        </nav>
+                    {%- endif %}
+                {%- endblock %}
+
+                <div id="cse373-content" class="col-lg">
+
+                {%- block content %}
+                        {% include "content.html" %}
+                {%- endblock %}
+
+                {% if config.theme.simple_analytics %}
+                    <div class="row">
+                        <div class="col-md-12 pl-md-5 pr-md-5 simple-analytics-footer">
+                            <a href="https://simpleanalytics.com/courses.cs.washington.edu?utm_source=courses.cs.washington.edu&utm_content=badge" referrerpolicy="origin" target="_blank"><img src="https://simpleanalyticsbadge.com/courses.cs.washington.edu?background=ffffff" loading="lazy" referrerpolicy="no-referrer" crossorigin="anonymous" /></a>
+                        </div>
+                    </div>
+                {% endif %}
+                </div>
+
+
+            </div>
+        </div>
+
+      {%- block scripts %}
+        <script>
+            var base_url = {{ base_url | tojson }};
+            {% if 'shortcuts' in config.theme %}var shortcuts = {{ config.theme.shortcuts | tojson }};{% endif %}
+        </script>
+
+        <script src="{{ 'js/jquery-3.2.1.slim.min.js'|url }}" defer></script>
+        <script src="{{ 'js/popper-1.12.9.min.js'|url }}" defer></script>
+        <script src="{{ 'js/bootstrap-4.0.0.min.js'|url }}" defer></script>
+
+        <script src="{{ 'js/base.js'|url }}" defer></script>
+
+
+        {%- for path in config['extra_javascript'] %}
+        <script src="{{ path|url }}" defer></script>
+        {%- endfor %}
+
+        {%- for path in (page.meta['extra_javascript'] if page else []) %}
+        <script src="{{ path|url }}" defer></script>
+        {%- endfor %}
+      {%- endblock %}
+
+        {% if 'search' in config['plugins'] %}{%- include "search-modal.html" %}{% endif %}
+        {% if 'shortcuts' in config.theme %}{%- include "keyboard-modal.html" %}{% endif %}
+
+
+        {% if config.theme.simple_analytics %}
+            <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+            <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt=""/></noscript>
+        {% endif %}
+    </body>
+</html>
+{% if page and page.is_homepage %}
+<!--
+MkDocs version : {{ mkdocs_version }}
+Build Date UTC : {{ build_date_utc }}
+-->
+{% endif %}

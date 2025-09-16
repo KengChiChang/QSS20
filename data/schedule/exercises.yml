@@ -1,0 +1,25 @@
+schedule:
+  start_indices:
+    exercise: 0
+  defaults:
+    exercise:
+      due: "11:59 pm"
+  exercises:
+    default_type: exercise
+    entries:
+      - title: "Getting Started"
+        start: "2024-4-4"
+        end: "2024-4-8"
+        url: https://colab.research.google.com/drive/1QbC5fcb8gQLfkjkxmhftz0leRUddwwh5?usp=sharing
+      - title: "Word Embeddings"
+        start: "2024-4-9"
+        end: "2024-4-15"
+        url: https://colab.research.google.com/drive/1zdFLHU1LHTupCBFEnNcPP26el50pBIJm?usp=sharing
+      - title: "Image Embeddings"
+        start: "2024-4-17"
+        end: "2024-4-26"
+        url: https://colab.research.google.com/drive/1JF_6CG7Hy7EO1Nbi6uV0UOrolx4oQSQV?usp=sharing
+      - title: "Transformers"
+        start: "2024-4-30"
+        end: "2024-5-10"
+        url: https://colab.research.google.com/drive/1Hr2JDmvl60V-CK_rBCL3TApbeHCoToZN?usp=sharing
