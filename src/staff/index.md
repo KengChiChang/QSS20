@@ -1,12 +1,11 @@
 ---
 title: 🙋 Staff / Office Hours
 template: no-toc.html
-# nav_order: 98
+nav_order: 103
 description: A listing of all the course staff members.
 extra_css: ['staff.scss']
 ---
 
-If you have a general question that other students could potentially benefit from, please post it on Ed. For logistical questions, we ask that you post privately on Ed so the whole staff can respond.
 
 ## Instructor
 
@@ -17,10 +16,10 @@ If you have a general question that other students could potentially benefit fro
   {% endfor %}
 </div>
 
-## Teaching Assistant
+## Computing Support
 
 <div class="role">
-  {% for page in (staff | sort(attribute='meta.name')) if page.meta.role == 'Teaching Assistant' %}
+  {% for page in (staff | sort(attribute='meta.name')) if page.meta.role == 'Computing Support' %}
     {% include 'staffer.html' %}
     {{ "<hr>" if not loop.last }}
   {% endfor %}

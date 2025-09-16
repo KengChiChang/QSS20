@@ -1,21 +1,17 @@
 ---
 name: "<a href='https://kengchichang.com/'>Keng-Chi Chang</a>"
 role: Instructor
-email: kechang@ucsd.edu
+email: kengchichang@dartmouth.edu
 pronouns: he/him
 photo: kengchi.jpg
 oh:
-    - Fri 4-5pm
-    - On <a href="https://ucsd.zoom.us/j/96797602998">Zoom</a>
+    - Wed 3:30-4pm
+    - Fri 3:30-4pm
+    - Silsby 123
 ---
 
-Hey, I'm Keng-Chi! I am a PhD candidate in Political Science 
-& MS candidate in Computer Science at UC San Diego. 
-My research interests are centered on computational social science, 
-with a focus on developing and applying machine learning and 
-natural language processing techniques to study social phenomena.
+Hey, I'm Keng-Chi! I am an Assistant Professor in Quantitative Social Science at Dartmouth.
+
+I use computational tools, including AI and Large Language Models, to study how technology and media influence politics. My work explores censorship circumvention, online image-sharing behavior, and how short-form video content are recommended by algorithms. I’m fascinated by the ways our digital world is reshaping democracy and the possibilities—and risks—it creates for our social life.
 
 Outside of work, I love hiking, arthouse movies, and cooking Taiwanese food.
-
-I look forward to the quarter and meeting you all!
-Feel free to come chat about anything, course related or not.

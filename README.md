@@ -9,15 +9,15 @@ This repo contains the course website for CSE 391. Content for this website is a
 We recommend using a [virtual environment](https://docs.python.org/3/library/venv.html). On Python 3.12+, create a `venv`:
 
 ```sh
-$ python3 -m venv .venv             # create the venv
-$ source .venv/bin/activate         # activate venv
-$ pip3 install -r requirements.txt  # install packages w/ pip
+python3 -m venv .venv             # create the venv
+source .venv/bin/activate         # activate venv
+pip3 install -r requirements.txt  # install packages w/ pip
 ```
 
 Then, every time, just activate the venv!
 
 ```sh
-$ source .venv/bin/activate
+source .venv/bin/activate.fish
 ```
 
 This is particularly helpful if you need to juggle different instances of the course website.
@@ -27,7 +27,7 @@ This is particularly helpful if you need to juggle different instances of the co
 In your `venv`, you should be able to run:
 
 ```sh
-$ python3 -m mkdocs serve
+python3 -m mkdocs serve
 ```
 
 Which should spin up a live server at [http://127.0.0.1:8000](http://127.0.0.1:8000).
@@ -35,7 +35,7 @@ Which should spin up a live server at [http://127.0.0.1:8000](http://127.0.0.1:8
 In contrast, when the site gets built, the CD will run:
 
 ```sh
-$ python3 -m mkdocs build --clean --strict
+python3 -m mkdocs gh-deploy --clean
 ```
 
 (which converts some types of warnings to errors)
@@ -86,10 +86,10 @@ Conventions:
 
 - prefer relative links rather than absolute when linking to sibling files
     (e.g., `[project main page](./index.md)`)
-    - prefer including `./` to make the relative-ness more obvious
-    - (this makes it easier to rename folders)
+  - prefer including `./` to make the relative-ness more obvious
+  - (this makes it easier to rename folders)
 - prefer absolute links instead of using `../blah` (e.g., `[syllabus](/syllabus.md)`)
-    - (this makes it easier to rename folders)
+  - (this makes it easier to rename folders)
 - **NOTE**: relative links are not supported for files in `collections`---they get resolved
     incorrectly.
     Instead, use absolute internal links (e.g., `[syllabus](/syllabus.md)`).
@@ -103,7 +103,7 @@ Conventions:
 - indented code blocks always have line numbers enabled
 - note: the theme currently doesn't work perfectly with line highlighting---the highlighting ends
     when the text ends, instead of spanning the full line
-    - this probably can't be fixed without changing `pymdownx.highlight.linenums_style` back to the
+  - this probably can't be fixed without changing `pymdownx.highlight.linenums_style` back to the
         default, which the theme doesn't currently display properly
 
 #### Other Noteworthy Markdown Extensions
@@ -117,12 +117,12 @@ Not a complete list; only the most useful ones
 
 - macros: enable Jinja2 support in Markdown files (runs before Markdown)
 - custom plugins:
-    - collections: the logic behind the collections
-    - auto-nav: load all page data earlier and use page metadata to set the nav
-        - also removes MkDoc's concept of "sections" from the nav... the plugin and theme probably
+  - collections: the logic behind the collections
+  - auto-nav: load all page data earlier and use page metadata to set the nav
+    - also removes MkDoc's concept of "sections" from the nav... the plugin and theme probably
             should be rewritten to not do this.
-    - sass: compile Sass files when building the site
-    - url-validation: this MkDocs plugin replaces the default url resolution Markdown extension
+  - sass: compile Sass files when building the site
+  - url-validation: this MkDocs plugin replaces the default url resolution Markdown extension
         added by MkDocs with one that outputs absolute links
 
 

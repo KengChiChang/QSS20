@@ -9,7 +9,7 @@ extra_javascript: ["assets/mermaid-10.8.0.min.js"]
 
 **Please use course messages instead of emailing the instructor**, as other students will likely share your questions and may be able to answer them too. While I will be answering questions within a window of 24 hours, I encourage you to help each other and answer each other's questions.
 
-There are channels for each major part of the course. The other folders and their respective topics for discussion are:
+<!-- There are channels for each major part of the course. The other folders and their respective topics for discussion are:
 
 - `qss20-general`: logistics, schedule, projects, due dates, and announcements, and general chat.
 
@@ -17,7 +17,7 @@ There are channels for each major part of the course. The other folders and thei
 
 - `qss20-gitCommand`: creating git repositories, the online GitHub interface, making commits and pull requests, etc.
 
-- `latex/overleaf`: LaTeX syntax, working with templates on Overleaf, etc.
+- `latex/overleaf`: LaTeX syntax, working with templates on Overleaf, etc. -->
 
 ## Computing
 

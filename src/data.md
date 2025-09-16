@@ -1,6 +1,6 @@
 ---
 title: "💾 Useful Data Sources"
-# nav_order: 120
+nav_order: 800
 extra_javascript: ["assets/mermaid-10.8.0.min.js"]
 ---
 
@@ -12,6 +12,7 @@ extra_javascript: ["assets/mermaid-10.8.0.min.js"]
 - [US Congressinal Record 1873-2017](https://data.stanford.edu/congress_text)
 - [Wikipedia Dumps](https://github.com/daveshap/PlainTextWikipedia)
 - [Upworthy News Archive](https://upworthy.natematias.com/)
+- [The Great Firewall's Largest Document Leak](https://gfw.report/blog/geedge_and_mesa_leak/en/)
 
 ## Images <a name="images"></a>
 
@@ -27,12 +28,6 @@ extra_javascript: ["assets/mermaid-10.8.0.min.js"]
 - [Reddit Dumps](https://academictorrents.com/browse.php?search=Watchful1%2C+RaiderBDev)
 
 
-## Replication Files <a name="replication"></a>
-
-- [Online Images Amplify Gender Bias](https://github.com/drguilbe/ImgVSText)
-- [Cross-Platform Emotions and Audience Engagement in Social Media Political Campaigning: Comparing Candidates’ Facebook and Instagram Images in the 2020 US Election](https://osf.io/g69tr/?view_only=31243a92935a439d8791e625fc20d5a2)
-- [The Geometry of Culture: Analyzing the Meanings of Class through Word Embeddings](https://journals.sagepub.com/doi/full/10.1177/0003122419877135)
-
 ## Sources to Find Data <a name="sources"></a>
 
 - [Harvard Dataverse](https://dataverse.harvard.edu/)
@@ -42,13 +37,3 @@ extra_javascript: ["assets/mermaid-10.8.0.min.js"]
 - [Google Dataset Search](https://datasetsearch.research.google.com/)
 - [Awesome Public Datasets](https://github.com/awesomedata/awesome-public-datasets/blob/master/README.rst)
 - [Paper with Code Datasets](https://paperswithcode.com/datasets)
-
-
-## Benchmark Datasets (Not for Analysis) <a name="benchmark-datasets"></a>
-
-- [ImageNet](http://www.image-net.org/)
-- [COCO](https://cocodataset.org/)
-- [Conceptual Captions](https://ai.google.com/research/ConceptualCaptions)
-- [Open Images](https://storage.googleapis.com/openimages/web/index.html)
-- [Web: Common Crawl](https://commoncrawl.org/)
-- [CelebV-HQ: Video Facial Attributes](https://github.com/CelebV-HQ/CelebV-HQ/tree/main?tab=readme-ov-file)

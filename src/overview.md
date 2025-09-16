@@ -27,3 +27,4 @@ The goal of this course is for students to become the best data scientists at wo
 ## Course Sessions
 
 Class meetings will typically consist of a lecture (\~40 minutes) followed by an in-class tutorial, interactive group activity, and occasional quizzes.  In-person attendance is required to get the most out of these group exercises.
+
