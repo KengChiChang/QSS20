@@ -2,33 +2,68 @@
 
 This repo contains the course website for CSE 391. Content for this website is almost entirely written in Markdown, and a Gitlab CI runner automatically deploys the contents of this repo to the web. The template was designed specifically for 373, although there are some portions of the infrastructure that could be cleaned up.
 
-This website was originally developed by Brian Chan, Maia Xiao, and Aaron Johnston in 20su. Updates by Hunter Schafer in 20au.
+## Development Setup
 
-## Installation
+### Python Environment
 
-It's recommended to install everything in a website-specific python 3.8 environment (e.g. [Miniconda](https://docs.conda.io/en/latest/miniconda.html)).
+We recommend using a [virtual environment](https://docs.python.org/3/library/venv.html). On Python 3.12+, create a `venv`:
 
-1. Install requirements from requirements.txt using `pip install -r requirements.txt`.
-Note that even if you are using conda, not all requirements are in conda-forge, so it's recommended to still use pip.
+```sh
+$ python3 -m venv .venv             # create the venv
+$ source .venv/bin/activate         # activate venv
+$ pip3 install -r requirements.txt  # install packages w/ pip
+```
 
-2. From the repo root, run `python setup.py develop`
-(assuming `python` is your python 3.8 executable)
+Then, every time, just activate the venv!
 
-## Developing Locally
+```sh
+$ source .venv/bin/activate
+```
 
-From the repo root, run `mkdocs serve`.
+This is particularly helpful if you need to juggle different instances of the course website.
 
-(`mkdocs serve --dirtyreload` exists as well; good for developing single pages, but may require
-restarts to reflect changes to nav/theme/collections/includes, and it's not even that much faster
-than rebuilding the entire site.)
+### Local Development
 
-## Building for Deployment
+In your `venv`, you should be able to run:
 
-`mkdocs build --clean`
+```sh
+$ python3 -m mkdocs serve
+```
 
-(By default, outputs to `site` directory.)
+Which should spin up a live server at [http://127.0.0.1:8000](http://127.0.0.1:8000).
 
-## Markdown Notes/Conventions
+In contrast, when the site gets built, the CD will run:
+
+```sh
+$ python3 -m mkdocs build --clean --strict
+```
+
+(which converts some types of warnings to errors)
+
+## Common Edits
+
+You may also want to see [Notable Files for Modifying this Template](#notable-files-for-modifying-this-template).
+
+### Changing the Schedule (Calendar, Lectures, Assignments)
+
+All files controlling the schedule can be found in `/data/schedule/`. A detailed setup guide for the schedule at the beginning of the quarter can be found in `/data/schedule/README.md`.
+
+### Updating Staff
+
+The staff (i.e. instructors and TAs) are individual markdown files in `collections/staff`. The custom collections plugin will automatically convert these into entries on the staff page of the website.
+
+### Hiding/Unhiding Discussion Questions
+
+In `src/lectures/{i}`, change the header in `questions.md` to include or exclude the `discussion_hide_solutions.scss` stylesheet, which hides the answer.
+
+```yaml
+extra_css: ["discussion.scss"]
+# extra_css: ["discussion.scss", "discussion_hide_solutions.scss"]
+```
+
+## Development Conventions
+
+### Markdown
 
 We use MkDocs, which uses Python-Markdown for its Markdown rendering.
 
@@ -36,7 +71,7 @@ We use MkDocs, which uses Python-Markdown for its Markdown rendering.
     [PHP markdown extra](https://michelf.ca/projects/php-markdown/extra/)
 - see [differences](https://python-markdown.github.io/#differences)
 
-### Links
+#### Links
 
 All internal links (both relative and absolute) in Markdown get processed by a Markdown extension to
 
@@ -61,8 +96,8 @@ Conventions:
 - note: external links are required to link to URLs in `courses.cs.washington.edu` that aren't
     part of the course site (e.g.,
     `[partner form](https://courses.cs.washington.edu/courses/cse373/tools/20su/partner/p1/)`)
-    
-### Code Blocks
+
+#### Code Blocks
 
 - prefer fenced code blocks (using ```)
 - indented code blocks always have line numbers enabled
@@ -71,27 +106,17 @@ Conventions:
     - this probably can't be fixed without changing `pymdownx.highlight.linenums_style` back to the
         default, which the theme doesn't currently display properly
 
-## Other Noteworthy Markdown Extensions
+#### Other Noteworthy Markdown Extensions
 
 Not a complete list; only the most useful ones
 
 - admonition: use `!!!` to add admonitions (styled as bootstrap alerts by the theme)
-- pymdownx.details: use `???` blocks to add details/summary elements 
-- markdown_katex: render KaTeX server-side using syntax that matches GitLab's. Surround backticks with dollar signs for inline math, and put "math" after three backticks for a math block (like specifying a language for code). Examples:
+- pymdownx.details: use `???` blocks to add details/summary elements
 
-$`\sum`$
-
-```math
-\sum_{i=1}^{10} i
-```
-
-## Noteworthy MkDocs Plugins
+### Noteworthy MkDocs Plugins
 
 - macros: enable Jinja2 support in Markdown files (runs before Markdown)
 - custom plugins:
-    - append-to-pages: prepend/append text to all Markdown (useful for adding site-wide
-        abbreviations or link targets
-        - rename pending
     - collections: the logic behind the collections
     - auto-nav: load all page data earlier and use page metadata to set the nav
         - also removes MkDoc's concept of "sections" from the nav... the plugin and theme probably
@@ -100,20 +125,6 @@ $`\sum`$
     - url-validation: this MkDocs plugin replaces the default url resolution Markdown extension
         added by MkDocs with one that outputs absolute links
 
-## Setting Up for the Quarter
-
-### CI
-
-Every quarter (after forking the website repo for that quarter), we need to email CSE support to
-ask them to set up the runner on the new repo.
-(We can't do this ourselves because the runner runs on the CSE web server, which we don't have
-permissions for.)
-
-We can use the same `.gitlab-ci.yml`; the only thing that needs to be changed is the value for `courseweb.variables.quarter`.
-
-### Schedule Configuration
-
-All files controlling the schedule can be found in `/data/schedule/`. A detailed setup guide for the schedule at the beginning of the quarter can be found in `/data/schedule/README.md`.
 
 ## Notable Files for Modifying this Template
 
@@ -130,4 +141,6 @@ This is a non-exhaustive list of some of the important files you may be looking 
 - `/theme/nav.html`: Overall navigation template, which includes the navigation for mobile.
 - `/includes/announcement.html` and `/includes/staffer.html`: Templates for announcements and staffers. These are in their own location because they are rendered via the `/collections/` system, which renders all files within a subfolder.
 
-Hello from CSE 391 22sp!!!! 
+## Acknowledgements
+
+This website was originally developed by Brian Chan, Maia Xiao, and Aaron Johnston in 20su. Updates by Hunter Schafer in 20au, and some more updates by Matt Wang across 23au-24su.

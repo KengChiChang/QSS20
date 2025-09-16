@@ -7,23 +7,23 @@ schedule:
   projects:
     default_type: project
     entries:
-      - title: "Project Preference Survey"
-        url: https://forms.gle/hQMcNT2jBnAiy1Ys9
-        start: "2024-4-25"
-        end: "2024-4-29"
-      - title: "Group Registration & Paper Signup"
-        url: https://forms.gle/ZCbrRMPgLfAV42c76
-        start: "2024-5-2"
-        end: "2024-5-7"
-      - title: "Written Proposal Submission"
-        url: https://www.gradescope.com/courses/759998/assignments/4475522
-        start: "2024-5-8"
-        end: "2024-5-13"
-      - title: "Github Repo Submission"
-        url: https://www.gradescope.com/courses/759998/assignments/4514108
-        start: "2024-5-21"
-        end: "2024-5-24"
-      - title: "Project Report Submission"
-        url: https://www.gradescope.com/courses/759998/assignments/4543736
-        start: "2024-5-30"
-        end: "2024-6-12"
+      - title: "Project preference survey"
+        url: 
+        start: "2025-9-30"
+        end: "2025-10-14"
+      - title: "Final project milestone 1"
+        url: 
+        start: "2025-10-14"
+        end: "2025-10-28"
+      - title: "Final project milestone 2"
+        url: 
+        start: "2025-10-28"
+        end: "2025-11-11"
+      - title: "Final project presentation"
+        url: 
+        start: "2025-11-13"
+        end: "2025-11-18"
+      - title: "Final report Submission"
+        url: 
+        start: "2025-11-18"
+        end: "2025-11-25"

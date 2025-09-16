@@ -1,0 +1,737 @@
+commands:
+    publish: 10
+    commands:
+      - name: Linux Commands
+        entries:
+          - name: Basic Shell Commands
+            commands:
+              - name: ssh
+                description: Log in to a remote Linux server (e.g., <code>attu</code>)
+                lectures:
+                    - 1
+              - name: pwd
+                description: Print current working directory
+                lectures:
+                    - 1
+              - name: cd
+                description: Change working directory
+                lectures:
+                    - 1
+              - name: ls
+                description: List files in working directory
+                lectures:
+                    - 1
+                flags:
+                  - 'a'
+                  - 'l'
+                  - 'r'
+              - name: man
+                description: Bring up manual for a command
+                lectures:
+                    - 1
+              - name: exit
+                description: Log out of shell
+                lectures:
+                    - 1
+              - name: xargs
+                description: Converts standard input to command line arguments
+                lectures:
+                    - 3
+                flags:
+                  - 'd' # used in HW8 (T1P4)
+              - name: tee
+                description: Allows for the output of a command to be redirected to both a file and stdout
+                lectures:
+                    - 3
+
+          - name: System Commands
+            commands:
+              - name: clear
+                description: Clears all output from console
+                lectures:
+                  - 1
+              - name: date
+                description: Output the system date
+                lectures:
+                  - 1
+              - name: cal
+                description: Output a text calendar
+                lectures:
+                  - 1
+              - name: uname
+                description: Print information about the current system
+                lectures:
+                  - 1
+          - name: Directory Commands
+            commands:
+              - name: ls
+                description: List files in working directory
+                lectures:
+                  - 1
+              - name: pwd
+                description: Print current working directory
+                lectures:
+                  - 1
+              - name: cd
+                description: Change working directory
+                lectures:
+                  - 1
+              - name: mkdir
+                description: Make a new directory
+                lectures:
+                  - 1
+              - name: rmdir
+                description: Remove the given directory (must be empty)
+                lectures:
+                  - 1
+          - name: File Commands
+            commands:
+              - name: cp
+                description: Copy a file
+                lectures:
+                  - 1
+                flags:
+                  - 'i' # used in HW8 self-exploration
+              - name: mv
+                description: Move a file (also used to rename files)
+                lectures:
+                  - 1
+                flags:
+                  - 'i' # used in HW8 self-exploration
+              - name: rm
+                description: Remove the given file
+                lectures:
+                  - 1
+                flags:
+                  - 'f'
+                  - 'r'
+              - name: touch
+                description: Create empty file, or change time-modified
+                lectures:
+                  - 1
+              - name: chmod who(+-)what filename
+                description: |
+                  Change permissions for filename (e.g., give owners/group read/write, others).
+                  <br />
+                  Example: <code>chmod ug+rw,o-rwx file.sh</code>
+                lectures:
+                  - 8
+              - name: chmod NNN filename
+                description: |
+                  Change permissions for filename using octal codes.
+                  Digits correspond to owner(u), group(g), others(o) respectively (+4 for read, +2 for write, +1 for execute).
+                  <br />
+                  Example: <code>chmod 660 file.txt</code>
+                lectures:
+                  - 8
+              - name: umask [options] [mask]
+                description: Sets the default permissions of files, calling umask similarly to chmod with octal will remove those permissions for newly created files (start with a leading 0 to indicate base 8 e.g. umask 0022)
+                lectures:
+                  - 8
+          - name: File Examination Commands
+            commands:
+              - name: cat
+                description: Print contents of a file
+                lectures:
+                  - 2
+              - name: less
+                description: Output file contents, one page
+                lectures:
+                  - 2
+              - name: more
+                description: Output file contents, one page
+                lectures:
+                  - 2
+              - name: head
+                description: Output number of lines of start of file
+                lectures:
+                  - 2
+                flags:
+                  - 'n'
+              - name: tail
+                description: Output number of lines of end of file
+                lectures:
+                  - 2
+                flags:
+                  - 'n'
+              - name: wc
+                description: Count words, characters, lines in a file
+                lectures:
+                  - 2
+                flags:
+                  - 'l'
+                  - 'w'
+          - name: Searching and Sorting Commands
+            commands:
+              - name: grep
+                description: Search given file for pattern
+                lectures:
+                  - 2
+                flags:
+                  - 'i'
+                  - 'o'
+                  - 'v'
+                  - 'E'
+              - name: sort
+                description: Sort input or file, line based
+                lectures:
+                  - 2
+                flags:
+                  - 'f'
+                  - 'r'
+              - name: uniq
+                description: Strip duplicate adjacent lines
+                lectures:
+                  - 2
+              - name: find
+                description: Search filesystem
+                lectures:
+                  - 2
+                flags:
+                  - 'type'
+              - name: cut
+                description: Remove section from each line of file
+                lectures:
+                  - 2
+              - name: sed -r 's/REGEX/TEXT/'
+                description: This will replace all matches of REGEX in the given file with TEXT and output it to the console.
+                lectures:
+                  - 7
+                flags:
+                  - 'i'
+          - name: Users
+            commands:
+              - name: whoami
+                description: Print your username
+                lectures:
+                  - 8
+              - name: id
+                description: Print user ID and group membership
+                lectures:
+                  - 8
+              - name: users
+                description: List logged-in users (short)
+                lectures:
+                  - 8
+              - name: who
+                description: List logged-in users (long)
+                lectures:
+                  - 8
+              - name: pinky
+                description: Print information about users
+                lectures:
+                  - 8
+          - name: Groups
+            commands:
+              - name: groups
+                description: Print group membership
+                lectures:
+                  - 8
+              - name: groupadd
+                description: Create a group
+                lectures:
+                  - 8
+              - name: groupdel
+                description: Delete a group
+                lectures:
+                  - 8
+              - name: groupmod
+                description: Modify a group
+                lectures:
+                  - 8
+              - name: chgrp <group> <filename>
+                description: Assign <filename> to group <group>
+                lectures:
+                  - 8
+              - name: chgrp <group> -R .
+                description: Changes all files recursively starting in the current directory to be owned by <group>
+                lectures:
+                  - 8
+          - name: Processes
+            commands:
+              - name: ps
+                description: List processes being run
+                lectures:
+                  - 8
+                flags:
+                  - 'u'
+              - name: top
+                description: Show process statistics
+                lectures:
+                  - 8
+              - name: kill
+                description: Terminate process by PID
+                lectures:
+                  - 8
+              - name: killall
+                description: Terminate process by name
+                lectures:
+                  - 8
+          - name: Java Commands
+            commands:
+              - name: javac ClassName.java
+                description: Compile ClassName
+                lectures:
+                  - 2
+              - name: java ClassName
+                description: Run ClassName
+                lectures:
+                  - 2
+
+
+      - name: Unix File System
+        entries:
+          - name: Relative Directories
+            commands:
+              - name: .
+                description: References the working directory
+                lectures:
+                  - 1
+              - name: ..
+                description: References the parent of working directory
+                lectures:
+                  - 1
+              - name: ~username
+                description: username's home directory
+                lectures:
+                  - 1
+              - name: ~/Desktop
+                description: Your desktop
+                lectures:
+                  - 1
+          - name: Unix File System
+            commands:
+              - name: /
+                description: Root directory that contains all directories
+                lectures:
+                  - 1
+              - name: /bin
+                description: Applications/programs (i.e. binaries)
+                lectures:
+                  - 1
+              - name: /dev
+                description: Hardware devices
+                lectures:
+                  - 1
+              - name: /etc
+                description: Configuration files
+                lectures:
+                  - 1
+              - name: /home
+                description: Contains user's home directories
+                lectures:
+                  - 1
+              - name: /proc
+                description: Running programs (processes)
+                lectures:
+                  - 1
+              - name: /tmp, /var
+                description: Temporary files
+                lectures:
+                  - 1
+              - name: /usr
+                description: Universal system resources
+                lectures:
+                  - 1
+              - name: Directory permissions
+                description: Directories have the same permissions as files but read determines viewing privileges, write determines add/delete file privileges, and execute determines whether a user can enter the directory.
+                lectures:
+                  - 8
+      - name: Text Editors
+        commands:
+          - name: nano
+            description: Very simple editor
+            lectures:
+              - 1
+          - name: vim
+            description: More advanced text-editor
+            lectures:
+              - 1
+          - name: emacs
+            description: More advanced text-editor
+            lectures:
+              - 1
+        entries:
+          - name: Vim Basics
+            commands:
+              - name: :w
+                description: Write (save) the current file
+                lectures:
+                  - 1
+              - name: :wq
+                description: Write (save) the current file and exit
+                lectures:
+                  - 1
+              - name: :q!
+                description: Quit, ignoring all changes
+                lectures:
+                  - 1
+              - name: i
+                description: Go into insert mode
+                lectures:
+                  - 1
+              - name: Esc
+                description: Go back to normal mode
+                lectures:
+                  - 1
+              - name: hjkl
+                description: Move cursor left, down, up, right
+                lectures:
+                  - 1
+              - name: u
+                description: Undo last change
+                lectures:
+                  - 1
+              - name: x
+                description: Delete character
+                lectures:
+                  - 1
+          - name: Emacs Basics
+            notes: C = control key, M = alt/meta key
+            commands:
+              - name: C-x C-f
+                description: Read a file into emacs
+                lectures:
+                  - 1
+              - name: C-x C-s
+                description: Save a file to disk
+                lectures:
+                  - 1
+              - name: C-x C-c
+                description: Exit emacs
+                lectures:
+                  - 1
+              - name: C-s
+                description: Search forward
+                lectures:
+                  - 1
+              - name: C-r
+                description: Search backwards
+                lectures:
+                  - 1
+              - name: C-v
+                description: Scroll to next screen
+                lectures:
+                  - 1
+              - name: M-v
+                description: Scroll to previous screen
+                lectures:
+                  - 1
+              - name: C-x u
+                description: Undo
+                lectures:
+                  - 1
+      - name: Bash Scripting
+        entries:
+          - name: Running a shell script
+            commands:
+              - name: "#!/bin/bash"
+                description: At top of file, tells the command line how to interpret your file
+                lectures:
+                  - 9
+              - name: chmod +x script.sh
+                description: Gives script.sh execute permissions so it can be run with ./script.sh
+                lectures:
+                  - 9
+          - name: Variables
+            commands:
+              - name: CLASS="391"
+                description: Creates a variable (no spaces on either side of = sign) (variable names are case sensitive)
+                lectures:
+                  - 9
+              - name: echo "I am taking $CLASS"
+                description: "Variables are referenced using the $ operator (output: I am taking 391)"
+                lectures:
+                  - 9
+              - name: echo 'I am taking $CLASS'
+                description: "Single quotes will not expand variables (output: I am taking $CLASS)"
+                lectures:
+                  - 9
+              - name: contents=$(ls)
+                description: The output of running a command can be saved to a variable and referenced later
+                lectures:
+                  - 9
+          - name: Command Line Arguments
+            commands:
+              - name: $0
+                description: Name of the script
+                lectures:
+                  - 9
+              - name: $1, $2, $3... etc.
+                description: First, second, third arguments
+                lectures:
+                  - 9
+              - name: $#
+                description: Number of arguments
+                lectures:
+                  - 9
+              - name: $@
+                description: List of all arguments
+                lectures:
+                  - 9
+          - name: Arithmetic
+            commands:
+              - name: let SUM="$a + $b"
+                description: Use let expression to do arithmetic (bash supports multiplication, division, addition, and subtraction)
+                lectures:
+                  - 9
+              - name: PRODUCT=$(( $a * $b ))
+                description: Other way to do arithmetic, must have spaces in between operations!
+                lectures:
+                  - 9
+          - name: For Loops
+            commands:
+              - name: for i in $(seq 1 4); do; echo $i; done
+                description: For loop syntax, begins with do and ends with done. Semicolon is the same thing as a new line.
+                lectures:
+                  - 9
+              - name: for file in $(ls); do; echo $file; done
+                description: Iterates over all of the files in the current directory by iterating over output of ls
+                lectures:
+                  - 9
+          - name: If Statements
+            commands:
+              - name: if [ $a -lt $b ]; then <br />&nbsp;&nbsp;echo "a is < b"<br /> else<br/>&nbsp;&nbsp;echo "a is not less than b"<br/> fi
+                description: If statement basic syntax. Boolean expression must be surrounded by [ ] with spaces on either side.
+                lectures:
+                  - 9
+              - name: -gt, -lt, -ge, -le, -eq, -ne
+                description: greater than, less than, greater than or equal to, less than or equal to, equals, not equals
+                lectures:
+                  - 9
+              - name: -a
+                description: And operator. Can also be written (if [ expr1 ] && [ expr2 ]; then)
+                lectures:
+                  - 9
+              - name: -o
+                description: Or operator. Can also be written (if [ expr1 ] || [ expr2 ]; then)
+                lectures:
+                  - 9
+              - name: if [ ! expr1 ]; then
+                description: Negates expr1
+                lectures:
+                  - 9
+              - name: =, !=
+                description: Test if string is equal (=) or not equal (!=)
+                lectures:
+                  - 9
+              - name: -z, -n
+                description: Test if a string is empty (-z) or nonempty (-n)
+                lectures:
+                  - 9
+              - name: -f, -d
+                description: Test if a file (-f) or directory (-d) exists
+                lectures:
+                  - 9
+              - name: -r, -w, -x
+                description: Test if a file exists and is readable (-r), writeable (-w) or executable (-x)
+                lectures:
+                  - 9
+
+          - name: Exit Codes
+            commands:
+              - name: $?
+                description: Variable containing exit status of previously run program. It will be 0 if the program executed correctly, or not 0 if it failed.
+                lectures:
+                  - 9
+
+      - name: Input/Output Redirection and Command Substitution
+        commands:
+          - name: command < filename
+            description: "stdin redirection: execute command and read its standard input from the contents of filename instead of from the console."
+            lectures:
+              - 2
+          - name: command > filename
+            description: "stdout redirection: execute command and redirect its standard output to the given filename"
+            lectures:
+              - 2
+          - name: command 2> filename
+            description: "stderr redirection: execute command and redirect its standard error to the given filename"
+            lectures:
+              - 2
+          - name: command 2>&1
+            description: "stderr redirection: execute command and redirect its standard error to standard output"
+            lectures:
+              - 2
+          - name: command 2>&1 > filename
+            description: "stdout and stderr redirection: execute command, redirect standard error to standard output, and redirect standard output to filename"
+            lectures:
+              - 2
+          - name: command1 | command2
+            description: "Pipes: execute command1 and send its standard output as standard input to command2."
+            lectures:
+              - 2
+          - name: command1 ; command2
+            description: '"THEN": Execute command1, then execute command2'
+            lectures:
+              - 3
+          - name: command1 && command2
+            description: '"AND": Execute command1, and if it succeeds, then execute command2'
+            lectures:
+              - 3
+          - name: command1 || command2
+            description: '"OR": Execute command1, and if it fails, then execute command2'
+            lectures:
+              - 3
+          - name: $(command)
+            description: "Command substitution: execute command, then place the output string literally into the given context e.g. `javac $(find -name \"*.java\")`"
+            lectures:
+              - 3
+          - name: alias <name>=<command>
+            description: Creates alias <name> for <command> (do NOT put spaces surrounding the equals)
+            lectures:
+              - 8
+          - name: .bash_profile
+            description: Everytime you log in to a shell (i.e. by ssh-ing into attu or logging into your computer), the commands in ~/.bash_profile are run
+            lectures:
+              - 8
+          - name: .bashrc
+            description: Everytime you launch a  non-login shell (i.e. by launching a new terminal) the commands in ~/.bashrc are run.
+            lectures:
+              - 8
+          - name: $PATH
+            description: Stores the path to all directories which the system will look for programs to run. If a path is in $PATH and contains a file named <command>, <command> will be run when you type <command>
+            lectures:
+              - 8
+          - name: export PATH=/your/new/directory:$PATH
+            description: Prepend a directory to your $PATH (directory will be looked through first for a filename matching <command> when <command is typed>)
+            lectures:
+              - 8
+          - name: export PATH=$PATH:/your/new/directory
+            description: Append a directory to your $PATH (directory will be looked through last for a filename matching <command> when <command is typed>)
+            lectures:
+              - 8
+      - name: Git Commands
+        commands:
+          - name: git clone url [dir]
+            description: Copy a git repository
+            lectures:
+              - 4
+          - name: git add file1 file2...
+            description: Adds file contents to staging area
+            lectures:
+              - 4
+          - name: git stage file1 file2...
+            description: Same as git add
+            lectures:
+              - 4
+          - name: git commit
+            description: Takes a snapshot of staging area and creates a commit
+            lectures:
+              - 4
+          - name: git status
+            description: View status of files in working directory and staging area
+            lectures:
+              - 4
+          - name: git diff
+            description: Show difference between staging area and working directory
+            lectures:
+              - 4
+          - name: git log
+            description: Show commit history
+            lectures:
+              - 4
+          - name: git pull
+            description: Fetch from remote repository and try to merge
+            lectures:
+              - 4
+          - name: git push
+            description: Push local repository to remote repository
+            lectures:
+              - 4
+          - name: git branch &lt;branch&gt;
+            description: Create a new branch with given name
+            lectures:
+              - 4
+          - name: git checkout &lt;branch&gt;
+            description: Switch to the given branch
+            lectures:
+              - 4
+          - name: git switch &lt;branch&gt;
+            description: Switch to the given branch
+            lectures:
+              - 4
+          - name: git merge feature
+            description: Merges the feature branch into the current branch checked out
+            lectures:
+              - 4
+          - name: git log --graph --oneline
+            description: View the commit history, and where HEAD and master are located. Flags unnecessary
+            lectures:
+              - 4
+      - name: Regex Syntax
+        commands:
+          - name: .
+            description: Matches any character
+            lectures:
+              - 6
+          - name: ^
+            description: Matches start of line
+            lectures:
+              - 6
+          - name: $
+            description: Matches end of line
+            lectures:
+              - 6
+          - name: \<
+            description: Matches start of word
+            lectures:
+              - 6
+          - name: \>
+            description: Matches end of word
+            lectures:
+              - 6
+          - name: \
+            description: Escape the following character
+            lectures:
+              - 6
+          - name: "|"
+            description: Logical or operator (match this character set or that character set)
+            lectures:
+              - 6
+          - name: "*"
+            description: Matches zero or more of the preceding character set
+            lectures:
+              - 6
+          - name: +
+            description: Matches one or more of the preceding character set
+            lectures:
+              - 6
+          - name: "?"
+            description: Matches zero or one of the preceding character set
+            lectures:
+              - 6
+          - name: ()
+            description: Group characters together
+            lectures:
+              - 6
+          - name: [ ]
+            description: Character set
+            lectures:
+              - 6
+          - name: '[^]'
+            description: Negate character set
+            lectures:
+              - 6
+          - name: '[a-z]'
+            description: Matches all lowercase letters
+            lectures:
+              - 6
+          - name: '[A-Z]'
+            description: Matches all uppercase letters
+            lectures:
+              - 6
+          - name: '[0-9]'
+            description: Matches all digits
+            lectures:
+              - 6
+          - name: \1
+            description: Back references the same characters captured in an earlier grouping (specified by the number), up to <code>\9</code>
+            lectures:
+              - 6
+          - name: '{}'
+            description:
+              Specify how many occurrences of a match we want.
+              Can be an exact number (i.e. <code>{N}</code>) or an inclusive range of numbers (i.e. <code>{MIN,MAX}</code>).
+            lectures:
+              - 6

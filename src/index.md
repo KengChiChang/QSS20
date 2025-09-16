@@ -1,11 +1,10 @@
 ---
 title: 🏡 Home
-heading: Applied Deep Representation Learning for Social Science
-subtitle: Spring 2024 at UC San Diego
+heading: QSS 20. Modern Statistical Computing
 template: no-toc.html
 nav_order: 0
 description: >-
-  Applied Deep Representation Learning for Social Science, Spring 2024
+  Modern Statistical Computing, Fall 2025
 extra_css: ["schedule.scss"]
 ---
 
@@ -128,8 +127,6 @@ dicts are merged recursively; other existing values are not changed
 {% set assignment_dates = assignment_dates|sort(attribute='date,type', reverse=true) %}
 
 
-
-
 {% macro update_assignment_status(events, day, active, status) %}
 
 {% if events %}
@@ -205,8 +202,7 @@ dicts are merged recursively; other existing values are not changed
 <!-- !!! info
     Welcome to POLI 179: Special Topics in Political Methodology -- Applied Deep Representation Learning for Social Science. The first class meeting is on Tuesday, April 2nd 6:30–7:50 PM at [Franklin Antonio Hall 1450](https://maps.app.goo.gl/1D9FsWWfe1bGzptE9). -->
 
-During the first half of the class, you will learn concepts and implementations in deep learning applied in analyzing text, images, and other data formats. You will practice implementing them in homeworks, while also looking for topics that spark your interest. During the second half of the class, you will focus on developing a group project applying these methods on a social science related problem of your choosing. You will also read closely into a paper related to your project and present it to facilitate learning in the class.
-
+QSS 20 is a foundational and required course in the Quantitative Social Science curriculum that equips students with the computing literacy to conduct social science research in the age of “big data.” The skills students learn in QSS 20 are building blocks for data science applications from research to industry to nonprofits and government.
 
 <!-- ## Calendar {: .mt-5 } -->
 

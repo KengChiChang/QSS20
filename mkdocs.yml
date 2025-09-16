@@ -1,5 +1,5 @@
-site_name: POLI 179
-site_url: https://kengchichang.github.io/poli-179
+site_name: QSS 20
+site_url: https://kengchichang.github.io/QSS20
 
 docs_dir: src
 
@@ -17,14 +17,11 @@ theme:
 
   favicon: false
 
-  external_links:
-    "📖 Syllabus": https://docs.google.com/document/d/1TNG2gTqD7MPyn7BU6nCK2p5dgvczRbrdA45b9vKb7EM/edit?usp=sharing
-    "💬 Ed Discussion": https://edstem.org/us/courses/57688/discussion/
-    "💯 Gradescope": https://www.gradescope.com/courses/759998
-    "💻 Colab": http://colab.research.google.com
-    "🖥️ Datahub": https://datahub.ucsd.edu/
+  external_links_before_nav:
+    "📖 Syllabus": https://docs.google.com/document/d/1tWoMG0JoCTQpXIGfXZQwyQxz_gmBQ3p8jzx5zPKqP5g/edit?usp=sharing
 
-  nav_footer_content: "[Acknowledgements](acknowledgements.md)"
+  external_links_after_nav:
+    "🖥️ DataCamp": https://www.datacamp.com/groups/shared_links/34a82e1044d5b2a52312ab70aa7b024a74c8c58de48813a10491ac407eefaa02
 
   simple_analytics: false
 
@@ -46,7 +43,6 @@ markdown_extensions:
       marker: "" # disable, since theme has its own TOC
       permalink: true
       toc_depth: "2-6"
-  - markdown_katex
   - pymdownx.tilde
   - pymdownx.details
   - pymdownx.emoji:
@@ -62,40 +58,6 @@ markdown_extensions:
 
 plugins:
   - search
-  - exclude:
-      glob: []
-  - append-to-pages:
-      # Note: "CSE" must be after "CSE X" entries in order for the latter to get caught
-      prepend: |
-        *[ADT]:
-        *[ADTs]:
-        *[AVL]:
-        *[CS]:
-        *[CSE 143]:
-        *[CSE 391]:
-        *[CSE]:
-        *[DRS]:
-        *[EX1]:
-        *[EX2]:
-        *[EX3]:
-        *[EX4]:
-        *[GPA]:
-        *[GPAs]:
-        *[IDE]:
-        *[IDEs]:
-        *[MOSS]:
-        *[NP]:
-        *[P1]:
-        *[P2]:
-        *[P3]:
-        *[P4]:
-        *[P]:
-        *[P0]:
-        *[PDF]:
-        *[TA]:
-        *[TAs]:
-        *[UW]:
-  - markdown-filter
   - bootstrap-tables
   - collections: # must load before macros
       collections:

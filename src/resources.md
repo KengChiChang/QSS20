@@ -1,76 +1,34 @@
 ---
-title: "📚 Resources"
-nav_order: 102
+title: "📚 Tools Overview"
+nav_order: 105
 extra_javascript: ["assets/mermaid-10.8.0.min.js"]
 ---
 
 
-## Python <a name="python"></a>
-- [Introduction to Python for Social Science](https://github.com/muhark/dpir-intro-python/tree/master)
-- [Primer on Python for R Users](https://rstudio.github.io/reticulate/articles/python_primer.html)
+## Communication
 
+**Please use course messages instead of emailing the instructor**, as other students will likely share your questions and may be able to answer them too. While I will be answering questions within a window of 24 hours, I encourage you to help each other and answer each other's questions.
 
-## Word Embeddings <a name="word-embeddings"></a>
+There are channels for each major part of the course. The other folders and their respective topics for discussion are:
 
-- [Learning Word Embedding](https://lilianweng.github.io/posts/2017-10-15-word-embedding/)
-- Draft [texbook chapter](https://web.stanford.edu/~jurafsky/slp3/6.pdf) by Jurafsky & Martin
-- [Word2Vec](https://towardsdatascience.com/word-embeddings-exploration-explanation-and-exploitation-with-code-in-python-5e3209f8a8c6)
-- [The Illustrated Word2vec](https://jalammar.github.io/illustrated-word2vec/)
-- [wevi: word embedding visual inspector](https://ronxin.github.io/wevi/)
-- [Word2Vec - Skipgram and CBOW](https://www.youtube.com/watch?v=UqRCEmrv1gQ)
-- [The secret ingredients of word2vec](https://www.ruder.io/secret-word2vec/#fn5)
-- [GloVe](https://towardsdatascience.com/light-on-math-ml-intuitive-guide-to-understanding-glove-embeddings-b13b4f19c010)
-- [FastText](https://towardsdatascience.com/fasttext-under-the-hood-11efc57b2b3)
+- `qss20-general`: logistics, schedule, projects, due dates, and announcements, and general chat.
 
+- `qss20-python`: python in general, not specific to problem sets or final project components.
 
-## Dimension Reduction <a name="dimension-reduction"></a>
+- `qss20-gitCommand`: creating git repositories, the online GitHub interface, making commits and pull requests, etc.
 
-- [The Singular Value Decomposition](https://peterbloem.nl/blog/pca-4)
-- [Singular Value Decomposition (SVD) & Principal Component Analysis (PCA)](https://jonathan-hui.medium.com/machine-learning-singular-value-decomposition-svd-principal-component-analysis-pca-1d45e885e491)
-- [SVD](https://freedium.cfd/https://medium.com/towards-data-science/svd-8c2f72e264f)
-- [PCA](https://towardsdatascience.com/a-one-stop-shop-for-principal-component-analysis-5582fb7e0a9c)
+- `latex/overleaf`: LaTeX syntax, working with templates on Overleaf, etc.
 
-## Clustering <a name="clustering"></a>
+## Computing
 
-- [K-means](https://towardsdatascience.com/k-means-clustering-8e1e64c1561c)
-- Spectral Clustering image segmentation [tutorial](https://towardsdatascience.com/spectral-clustering-aba2640c0d5b)
-- [Understanding Convolutions on Graphs](https://distill.pub/2021/understanding-gnns/)
-- [A Gentle Introduction to Graph Neural Networks](https://distill.pub/2021/gnn-intro/)
+- **Locally-installed Python**. While cloud computing is common in data science, the baseline for code development is to work locally. So the main interface we will use to code is your own laptop, on which you will install Python and relevant packages.
 
-## Neural Networks <a name="neural-networks"></a>
+- **Text editor**. You will need this when working with code locally to edit `.py` scripts, text files, and `.yaml` files. See instructions below.
 
-- [Neural Networks by 3Blue1Brown](https://www.3blue1brown.com/topics/neural-networks)
-- [What happens *inside* a neural network? by vcubingx](https://youtu.be/-at7SLoVK_I?si=mjtwBDL_GW064_bi)
-- [Visualizing Neural Networks with the Grand Tour](https://distill.pub/2020/grand-tour/)
-- Draft [textbook chapter](https://web.stanford.edu/~jurafsky/slp3/7.pdf) by Jurafsky & Martin
-- [A Neural Network Playground](https://playground.tensorflow.org/#activation=tanh&batchSize=10&dataset=circle&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=0&networkShape=4,2&seed=0.08286&showTestData=false&discretize=false&percTrainData=50&x=true&y=true&xTimesY=false&xSquared=false&ySquared=false&cosX=false&sinX=false&cosY=false&sinY=false&collectStats=false&problem=classification&initZero=false&hideText=false)
-- [Object Detection for Dummies Part 2: CNN, DPM and Overfeat](https://lilianweng.github.io/posts/2017-12-15-object-recognition-part-2/)
-- [CNN](https://towardsdatascience.com/a-comprehensive-guide-to-convolutional-neural-networks-the-eli5-way-3bd2b1164a53)
+- **Git/GitHub for version control**. One of the course goals is to get you more familiar with using Git/GitHub for version control. You can interact with GitHub both from your local machine and from the Jhub remote environment. There are instructions below for each, and we'll have an in-class activity where you create your own repository and add me as a collaborator.
 
-## Transformers <a name="transformers"></a>
+- **Jhub as a remote computing environment**. [Jonathan Crossett in Dartmouth’s Information, Technology, and Computing](https://itc.dartmouth.edu/people/jonathan-crossett) has set up a dedicated course server on Dartmouth's Jupyter Hub (Jhub for short). This allows you to open up any browser and complete Python tutorials without needing to download data or files locally / deal with package installation issues. You will need a local Python installation for this course, but JHub is an acceptable option for early in the quarter and/or a backup if/when you have sticky local installation errors. More details on the server are below.
 
-- [The Illustrated Transformer](http://jalammar.github.io/illustrated-transformer/)
-- [GPT in 60 Lines of NumPy](https://jaykmody.com/blog/gpt-from-scratch/#gpt-architecture)
-- Draft [textbook chapter](https://web.stanford.edu/~jurafsky/slp3/10.pdf) by Jurafsky & Martin
-- [BERT](https://towardsdatascience.com/bert-explained-state-of-the-art-language-model-for-nlp-f8b21a9b6270)
-- [Generalized Language Models](https://lilianweng.github.io/posts/2019-01-31-lm/)
-- [The Transformer Family Version 2.0](https://lilianweng.github.io/posts/2023-01-27-the-transformer-family-v2/)
-- [Large Transformer Model Inference Optimization](https://lilianweng.github.io/posts/2023-01-10-inference-optimization/)
+- **Terminal/terminal emulator**. This is mainly for interfacing with Git/GitHub. See instructions below for installation.
 
-## Multimodality and Contrastive Learning <a name="multimodality"></a>
-
-- [CLIP: Connecting text and images](https://openai.com/research/publications/clip/)
-- [Contrastive Representation Learning](https://lilianweng.github.io/posts/2021-05-31-contrastive/)
-- [Generalized Visual Language Models](https://lilianweng.github.io/posts/2022-06-09-vlm/)
-
-## Interpretability and Feature Visualization <a name="interpretability"></a>
-
-- [Multimodal Neurons in Artificial Neural Networks](https://distill.pub/2021/multimodal-neurons/)
-- [Visualizing Neural Networks with the Grand Tour](https://distill.pub/2021/grand-tour/)
-
-## Packages <a name="packages"></a>
-
-- [gensim](https://radimrehurek.com/gensim/)
-- [fastText](https://fasttext.cc/)
-- [BERTopic](https://maartengr.github.io/BERTopic/index.html)
-- [sentence-transformers](https://www.sbert.net/)
+- **LaTeX/Overleaf for dynamic typesetting**. We'll be using the LaTeX typesetting software to integrate writing and formulae and more cleanly integrate figures into writeups. We'll be interacting with LaTeX through an online interface called Overleaf, so please [create a free account here](https://www.overleaf.com/register). If you want to work with LaTeX offline/locally, try googling "how to install LaTeX".

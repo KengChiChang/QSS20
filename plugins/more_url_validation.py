@@ -9,10 +9,8 @@ import jinja2
 import mkdocs
 from markdown import Extension
 from markdown.treeprocessors import Treeprocessor
-from mkdocs.utils import path_to_url, warning_filter
 
 log = logging.getLogger(f"mkdocs.custom_plugins.{__name__}")
-log.addFilter(warning_filter)
 
 # unfortunately, it's really hard to get the current file/files from markdown,
 # so this code is fairly hacky
@@ -25,8 +23,9 @@ class MoreUrlValidationPlugin(mkdocs.plugins.BasePlugin):
     def on_config(self, config):
         # Note: this will leave the extension in the config for any other mkdocs extensions that
         # read the markdown extensions (so other extensions get the features too)
-        config['markdown_extensions'].append(
-            RelativePathExtensionReplacement(config['site_url'], self.file_data))
+        config["markdown_extensions"].append(
+            RelativePathExtensionReplacement(config["site_url"], self.file_data)
+        )
 
     # runs right before markdown rendering for each page; handles markdown + macros jinja/markdown
     def on_page_markdown(self, markdown, page, config, files):
@@ -42,29 +41,48 @@ class MoreUrlValidationPlugin(mkdocs.plugins.BasePlugin):
     def on_env(self, env, config, files):
         self.file_data["files"] = files
 
-        @jinja2.contextfilter
+        @jinja2.pass_context
         def better_url_filter(context, value):
-            """ A Template filter to normalize URLs. """
+            """A Template filter to normalize URLs."""
             # exclude page parameter; template urls are always relative to site root (site_dir)
-            return normalize_url(value, files, page=context['page'], site_url=config['site_url'],
-                                 treat_relative_as_absolute=True)[0]
+            return normalize_url(
+                value,
+                files,
+                page=context["page"],
+                site_url=config["site_url"],
+                treat_relative_as_absolute=True,
+            )[0]
 
-        @jinja2.contextfilter
+        @jinja2.pass_context
         def no_validation_url_filter(context, value):
-            """ A Template filter to normalize URLs. """
+            """A Template filter to normalize URLs."""
             # exclude page parameter; template urls are always relative to site root (site_dir)
-            return normalize_url(value, files, page=context['page'], site_url=config['site_url'],
-                                 treat_relative_as_absolute=True, disable_validation=True)[0]
-        env.filters['url'] = better_url_filter
-        env.filters['page_url'] = no_validation_url_filter  # for urls from page.url
+            return normalize_url(
+                value,
+                files,
+                page=context["page"],
+                site_url=config["site_url"],
+                treat_relative_as_absolute=True,
+                disable_validation=True,
+            )[0]
+
+        env.filters["url"] = better_url_filter
+        env.filters["page_url"] = no_validation_url_filter  # for urls from page.url
 
 
-def normalize_url(url, files, page=None, site_url='',
-                  treat_relative_as_absolute=False, disable_validation=False):
+def normalize_url(
+    url,
+    files,
+    page=None,
+    site_url="",
+    treat_relative_as_absolute=False,
+    disable_validation=False,
+):
     """
     Return (absolute url using the site url, url should open in new page (is external or non-html).
     """
-    url = path_to_url(url or '.')
+    url = url or "."
+
     # Allow links to be fully qualified URLs or the current page
     scheme, netloc, path, params, query, fragment = urlparse(url)
     if scheme or netloc:
@@ -73,7 +91,7 @@ def normalize_url(url, files, page=None, site_url='',
         return url, False
 
     absolute = False
-    if path.startswith(('/', '\\')):
+    if path.startswith(("/", "\\")):
         path = path[1:]
         absolute = True
 
@@ -82,8 +100,11 @@ def normalize_url(url, files, page=None, site_url='',
         is_not_html = False
     else:
         # Determine the filepath of the target.
-        file_dir = os.path.dirname(page.file.src_path) \
-            if page and not (absolute or treat_relative_as_absolute) else ''
+        file_dir = (
+            os.path.dirname(page.file.src_path)
+            if page and not (absolute or treat_relative_as_absolute)
+            else ""
+        )
         target_path = os.path.join(file_dir, urlunquote(path))
         target_path = os.path.normpath(target_path).lstrip(os.sep)
 
@@ -116,27 +137,29 @@ class _RelativePathTreeprocessor(Treeprocessor):
         tags and then makes them absolute based on the site url
         """
         for element in root.iter():
-            if element.tag == 'a':
-                key = 'href'
-            elif element.tag == 'img':
-                key = 'src'
+            if element.tag == "a":
+                key = "href"
+            elif element.tag == "img":
+                key = "src"
             else:
                 continue
 
             url = element.get(key)
             new_url, set_target = self.path_to_url(url)
             element.set(key, new_url)
-            if set_target and element.tag == 'a':
-                element.set('target', '_blank')
-                element.set('rel', 'noopener noreferrer')
+            if set_target and element.tag == "a":
+                element.set("target", "_blank")
+                element.set("rel", "noopener noreferrer")
 
         return root
 
     def path_to_url(self, url):
-        return normalize_url(url,
-                             self.file_data["files"],
-                             page=self.file_data["page"],
-                             site_url=self.site_url)
+        return normalize_url(
+            url,
+            self.file_data["files"],
+            page=self.file_data["page"],
+            site_url=self.site_url,
+        )
 
 
 class RelativePathExtensionReplacement(Extension):

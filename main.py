@@ -3,6 +3,7 @@ from datetime import datetime
 import jinja2
 from dateutil import rrule
 from markdown import Markdown
+from markupsafe import Markup
 
 from plugins.more_url_validation import normalize_url
 
@@ -46,21 +47,24 @@ def set_command_reference_visibility(env):
 
 
 def define_env(env):
-    env.config['j2_extensions'] = ['jinja2.ext.do']
+    # set_command_reference_visibility(env)
+
+    env.config["j2_extensions"] = ["jinja2.ext.do"]
 
     @env.filter
     def markdown(text):
         md = Markdown(
-            extensions=env.conf['markdown_extensions'],
-            extension_configs=env.conf['mdx_configs'] or {}
+            extensions=env.conf["markdown_extensions"],
+            extension_configs=env.conf["mdx_configs"] or {},
         )
-        return jinja2.Markup(md.convert(text))
-    # env.filters["markdown"] = env.conf["plugins"]["markdown-filter"].md_filter
+        return Markup(md.convert(text))
 
     @env.macro
     def doc_env():
         "Document the environment"
-        return {name: getattr(env, name) for name in dir(env) if not name.startswith('_')}
+        return {
+            name: getattr(env, name) for name in dir(env) if not name.startswith("_")
+        }
 
     @env.macro
     def parse_date(date):
@@ -68,27 +72,25 @@ def define_env(env):
 
     @env.macro
     def dates_gen(start, days):
-        r = rrule.rrule(rrule.DAILY,
-                        byweekday=[DAYS_OF_THE_WEEK[d] for d in days],
-                        dtstart=start)
+        r = rrule.rrule(
+            rrule.DAILY, byweekday=[DAYS_OF_THE_WEEK[d] for d in days], dtstart=start
+        )
         rs = rrule.rruleset()
         rs.rrule(r)
         return iter(rs)
 
     @env.macro
     def dates_gen_with_dummies(start, days, dummy_days):
-        r = rrule.rrule(rrule.DAILY,
-                        byweekday=[DAYS_OF_THE_WEEK[d] for d in days],
-                        dtstart=start)
-        r_dummy = rrule.rrule(rrule.DAILY,
-                              byyearday=dummy_days,
-                              dtstart=start)
+        r = rrule.rrule(
+            rrule.DAILY, byweekday=[DAYS_OF_THE_WEEK[d] for d in days], dtstart=start
+        )
+        r_dummy = rrule.rrule(rrule.DAILY, byyearday=dummy_days, dtstart=start)
         rs = rrule.rruleset()
         rs.rrule(r)
         rs.rrule(r_dummy)
         return iter(rs)
 
-    env.variables.update(env.conf['plugins']['collections'].collections)
+    env.variables.update(env.conf["plugins"]["collections"].collections)
 
     @env.macro
     def deep_get(d, *args, default=None):
@@ -110,12 +112,18 @@ def define_env(env):
             output[k] = v
         return output
 
-
     @env.filter
-    @jinja2.contextfilter
+    @jinja2.pass_context
     def url(context, value):
-        """ A Template filter to normalize URLs. """
+        """A Template filter to normalize URLs."""
         # exclude page parameter; template urls are always relative to site root (site_dir)
-        files = env.conf['plugins']['url-validation'].file_data["files"]  # why is this a thing
-        return normalize_url(value, files, page=context['page'], site_url=env.conf['site_url'],
-                             treat_relative_as_absolute=True)[0]
+        files = env.conf["plugins"]["url-validation"].file_data[
+            "files"
+        ]  # why is this a thing
+        return normalize_url(
+            value,
+            files,
+            page=context["page"],
+            site_url=env.conf["site_url"],
+            treat_relative_as_absolute=True,
+        )[0]

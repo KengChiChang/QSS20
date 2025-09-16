@@ -87,6 +87,14 @@
                             <a class="navbar-brand d-none d-lg-block cse373-brand-container" href="{{ nav.homepage.url|page_url }}">
                                 {{ config.site_name }}
                             </a>
+
+                            <ul class="nav nav-pills flex-column">
+                                {%- for name, link_url in config.theme.external_links_before_nav.items() %}
+                                    <li class="nav-item">
+                                        <a href="{{ link_url | url }}" class="nav-link">{{ name }}</a>
+                                    </li>
+                                {%- endfor %}
+                            </ul>
                             <!-- Main navigation -->
                             {% include "nav.html" %}
 
@@ -96,7 +104,7 @@
                                 <a href="{{ '/course_tools.md' | url }}">Course Tools  <small><i class="fa fa-external-link text-muted" aria-hidden="true"></i></small></a>
                             </span> -->
                             <ul class="nav nav-pills flex-column">
-                                {%- for name, link_url in config.theme.external_links.items() %}
+                                {%- for name, link_url in config.theme.external_links_after_nav.items() %}
                                     <li class="nav-item">
                                         <a href="{{ link_url | url }}" class="nav-link">{{ name }}</a>
                                     </li>
@@ -105,7 +113,8 @@
 
                             {%- block nav_footer %}
                             <footer class="mt-auto">
-                                {{ config.theme.nav_footer_content | markdown }}
+                                {# {{ config.theme.nav_footer_content | markdown }} #}
+                                {{ config.theme.nav_footer_content }}
                             </footer>
                             {%- endblock %}
                         </nav>

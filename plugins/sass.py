@@ -7,27 +7,29 @@ from mkdocs import utils
 from mkdocs.structure.files import Files, File
 
 log = logging.getLogger(f"mkdocs.custom_plugins.{__name__}")
-log.addFilter(mkdocs.utils.warning_filter)
 
 
 class SassPlugin(mkdocs.plugins.BasePlugin):
 
     config_scheme = (
-        ('sass_extensions', mkdocs.config.config_options.Type(list, default=['.scss', '.sass'])),
-        ('include_dirs', mkdocs.config.config_options.Type(list, default=['sass'])),
+        (
+            "sass_extensions",
+            mkdocs.config.config_options.Type(list, default=[".scss", ".sass"]),
+        ),
+        ("include_dirs", mkdocs.config.config_options.Type(list, default=["sass"])),
     )
 
     def on_files(self, files: Files, config):
         updated_files = []
         for file in files:
-            if os.path.splitext(file.src_path)[1] in self.config['sass_extensions']:
-                updated_files.append(SassFile(file, self.config['include_dirs']))
+            if os.path.splitext(file.src_path)[1] in self.config["sass_extensions"]:
+                updated_files.append(SassFile(file, self.config["include_dirs"]))
             else:
                 updated_files.append(file)
         return Files(updated_files)
 
     def on_serve(self, server, config, builder):
-        for d in self.config['include_dirs']:
+        for d in self.config["include_dirs"]:
             server.watch(d, builder)
 
 
@@ -54,13 +56,15 @@ class SassFile(File):
         else:
             log.debug("Compiling sass file: '{}'".format(self.src_path))
             try:
-                css = sass.compile(filename=self.abs_src_path,
-                                   output_style='compressed',
-                                   include_paths=self.include_dirs)
+                css = sass.compile(
+                    filename=self.abs_src_path,
+                    output_style="compressed",
+                    include_paths=self.include_dirs,
+                )
                 output_dir = os.path.dirname(self.abs_dest_path)
                 if not os.path.exists(output_dir):
                     os.makedirs(output_dir)
-                with open(self.abs_dest_path, 'w', encoding="utf-8") as f:
+                with open(self.abs_dest_path, "w", encoding="utf-8") as f:
                     f.write(css)
             except sass.CompileError as e:
                 log.error("Error compiling sass file '{}': {}".format(self.src_path, e))
@@ -69,14 +73,16 @@ class SassFile(File):
         if not self.include_dirs:
             return False
         # search for last modified in each include dir
-        last_modified_include = max(max(os.path.getmtime(f) for f, _, _ in os.walk(d))
-                                    for d in self.include_dirs)
+        last_modified_include = max(
+            max(os.path.getmtime(f) for f, _, _ in os.walk(d))
+            for d in self.include_dirs
+        )
         return os.path.getmtime(self.abs_dest_path) < last_modified_include
 
     def is_css(self):
-        """ Return True if file is a CSS file. """
+        """Return True if file is a CSS file."""
         return True
 
 
 def _to_css_extension(path):
-    return os.path.splitext(path)[0] + '.css'
+    return os.path.splitext(path)[0] + ".css"

@@ -1,8 +1,9 @@
 Metadata-Version: 2.1
-Name: mkdocs-custom-plugins
+Name: mkdocs-cse373-custom-plugins
 Version: 0.1.0
-Summary: Custom plugins for website template
+Summary: Custom plugins for the CSE 373 website template
 Home-page: 
 License: MIT
 Keywords: mkdocs
 Requires-Python: >=3.8
+Requires-Dist: mkdocs>=1.1.2

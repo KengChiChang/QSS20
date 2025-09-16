@@ -1,12 +1,12 @@
 ---
 title: 🙋 Staff / Office Hours
 template: no-toc.html
-nav_order: 98
+# nav_order: 98
 description: A listing of all the course staff members.
 extra_css: ['staff.scss']
 ---
 
-If you have a general question that other students could potentially benefit from, please post it on Ed. For logistical questions, we ask that you post privately on Ed so the whole staff can respond. 
+If you have a general question that other students could potentially benefit from, please post it on Ed. For logistical questions, we ask that you post privately on Ed so the whole staff can respond.
 
 ## Instructor
 

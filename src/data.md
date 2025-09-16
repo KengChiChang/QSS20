@@ -1,6 +1,6 @@
 ---
 title: "💾 Useful Data Sources"
-nav_order: 120
+# nav_order: 120
 extra_javascript: ["assets/mermaid-10.8.0.min.js"]
 ---
 
@@ -22,11 +22,13 @@ extra_javascript: ["assets/mermaid-10.8.0.min.js"]
 
 
 ## Multimodal <a name="multimodal"></a>
+
 - [Political Advertisements from Facebook](https://www.propublica.org/datastore/dataset/political-advertisements-from-facebook)
 - [Reddit Dumps](https://academictorrents.com/browse.php?search=Watchful1%2C+RaiderBDev)
 
 
 ## Replication Files <a name="replication"></a>
+
 - [Online Images Amplify Gender Bias](https://github.com/drguilbe/ImgVSText)
 - [Cross-Platform Emotions and Audience Engagement in Social Media Political Campaigning: Comparing Candidates’ Facebook and Instagram Images in the 2020 US Election](https://osf.io/g69tr/?view_only=31243a92935a439d8791e625fc20d5a2)
 - [The Geometry of Culture: Analyzing the Meanings of Class through Word Embeddings](https://journals.sagepub.com/doi/full/10.1177/0003122419877135)

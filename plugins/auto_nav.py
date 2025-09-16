@@ -5,7 +5,6 @@ import mkdocs.plugins
 import mkdocs.utils
 
 log = logging.getLogger(f"mkdocs.custom_plugins.{__name__}")
-log.addFilter(mkdocs.utils.warning_filter)
 
 # Warning: this plugin is rather hacky and liable to break with mkdocs updates
 
@@ -27,6 +26,7 @@ class AutoNavPlugin(mkdocs.plugins.BasePlugin):
 
                 def new_read_source(self, cfg):
                     pass
+
                 item.read_source = types.MethodType(new_read_source, item)
             elif item.is_section:
                 self.load_pages(item.children, config)
@@ -36,21 +36,20 @@ class AutoNavPlugin(mkdocs.plugins.BasePlugin):
             if item.is_section:
                 sub_children = item.children[1:]
                 index = item.children[0]  # index should always be first child
-                if not index.is_page \
-                        or index.file.name != 'index':
+                if not index.is_page or index.file.name != "index":
                     # exclude and stop traversing children
-                    log.debug('Excluding from nav: {}'.format(index))
+                    log.debug("Excluding from nav: {}".format(index))
                     del nav[i]
                     continue
                 index.children = sub_children
                 self.traverse(sub_children, index)
                 item = nav[i] = index
-                if 'nav_order' not in index.meta:
+                if "nav_order" not in index.meta:
                     # exclude, but continue traversing children
-                    log.debug('Excluding from nav: {}'.format(index))
+                    log.debug("Excluding from nav: {}".format(index))
                     del nav[i]
             elif item.is_page:
-                if 'nav_order' not in item.meta:
+                if "nav_order" not in item.meta:
                     del nav[i]
             item.parent = parent
-        nav.sort(key=lambda page: page.meta['nav_order'])
+        nav.sort(key=lambda page: page.meta["nav_order"])
