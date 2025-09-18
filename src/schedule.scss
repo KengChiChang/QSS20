@@ -241,9 +241,11 @@ td.project-inactive, td.exercise-inactive {
         }
 
         &.pdf::before, &.pptx::before, &.blank::before, &.solution::before,
-        &.videos::before, &.handout::before, &.zoom::before, &.gslides::before, &.gsheets::before,
+        &.videos::before, &.handout::before, &.zoom::before, &.slides::before, 
+        &.gslides::before, &.gsheets::before,
         &.notebook::before, &.files::before, &.commands::before, &.recording::before,
-        &.notebook1::before, &.notebook2::before, &.notebook3::before {
+        &.notebook1::before, &.notebook2::before, &.notebook3::before,
+        &.lecture::before, &.activity::before,  {
             content: "";
             position: relative;
             display: inline-block;
@@ -268,12 +270,18 @@ td.project-inactive, td.exercise-inactive {
 
         }
 
+        &.slides::before {
+            background-image: url(img/gslides.png);
+        
+        }
+
         &.gsheets::before {
             background-image: url(img/gsheets.png);
 
         }
 
-        &.notebook::before, &.notebook1::before, &.notebook2::before, &.notebook3::before {
+        &.notebook::before, &.notebook1::before, &.notebook2::before, &.notebook3::before,
+        &.lecture::before, &.activity::before {
             background-image: url(img/notebook.png);
 
         }

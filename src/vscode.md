@@ -34,7 +34,7 @@ code --install-extension ms-python.vscode-pylance
 
 * Open your project folder in VS Code (**File → Open Folder**).
 * Press **⌘⇧P / Ctrl+Shift+P** → **Python: Select Interpreter**.
-* Choose the interpreter from your conda env like `~/miniforge3/bin/python`).
+* Choose the interpreter from your conda environment like `qss20`).
 
 If you don’t see it, ensure the env is created and activated once in a terminal, then retry **Select Interpreter**.
 
@@ -42,7 +42,7 @@ If you don’t see it, ensure the env is created and activated once in a termina
 ## Jupyter notebooks in VS Code
 
 * Create a new file `analysis.ipynb` (File → New File → Jupyter Notebook).
-* At the top right, choose the **Kernel** → pick your conda environment (`~/miniforge3/bin/python`).
+* At the top right, choose the **Kernel** → pick "Python Environments" → pick your conda environment (`qss20`).
 * Try a cell:
 
   ```python
@@ -50,9 +50,11 @@ If you don’t see it, ensure the env is created and activated once in a termina
   print(sys.version)
   ```
 
-If VS Code asks to install **ipykernel**, accept or install manually:
+If VS Code asks to install **ipykernel**, run the following in the terminal:
 
 ```bash
-pip install ipykernel
-python -m ipykernel install --user --name myproject --display-name "Python (myproject)"
+conda activate qss20
+conda install jupyterlab notebook ipykernel
 ```
+
+Then restart VS Code and retry.

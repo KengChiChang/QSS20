@@ -291,7 +291,7 @@ dicts are merged recursively; other existing values are not changed
   <div class="card card-body">
     {% for video in res['videos'] %}
         <span>
-            <a class="itempool-link" href="{{ video.url }}">{{ video.name }}</a> [{{ video.duration }}]
+            <a class="itempool-link" href="{{ video.url }}">{{ video.name }}</a>
         </span>
     {% endfor %}
   </div>

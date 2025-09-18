@@ -8,14 +8,14 @@ schedule:
     lecture:
       resources: # Links always relative to schedule's page
         lesson:
-          gslides: null
+          slides: null
         resources:
           "Notes": "/resources.md/#week{num}"
         schedule:
           gsheets: null
   styles:
     resources:
-      pre-class:
+      datacamp:
         resource-links:
           - btn-group
         resource-link:
@@ -47,112 +47,120 @@ schedule:
       - title: "Course intro & syllabus review"
         resources:
           lesson:
-            gslides: https://docs.google.com/presentation/d/1qchanW5HfuUvZEIpxSDUDeT57eDd-ay3qvIElXzrbPE/preview
+            slides: https://docs.google.com/presentation/d/1qchanW5HfuUvZEIpxSDUDeT57eDd-ay3qvIElXzrbPE/preview
           resources: null
           schedule: null
       - title: "Python basics & software setup"
         resources:
+          datacamp:
+            videos: 
+              - url: https://campus.datacamp.com/courses/intro-to-python-for-data-science/chapter-1-python-basics?ex=1
+                name: "Introduction to Python: Python Basics"
+              - url: https://campus.datacamp.com/courses/intro-to-python-for-data-science/chapter-2-python-lists?ex=1
+                name: "Introduction to Python: Python Lists"
+              - url: https://campus.datacamp.com/courses/intro-to-python-for-data-science/chapter-3-functions-and-packages?ex=1
+                name: "Introduction to Python: Functions and Packages"
           lesson:
-            gslides: https://docs.google.com/presentation/d/1ERNnk7gj1ZGZ2yuUJia7seE49x3Zbvz8dLRMvV2hn4Y/preview
-            notebook1: https://github.com/KengChiChang/QSS20_FA25/blob/main/lectures/lec02_20250918/lec02_lecture.ipynb
-            notebook2: https://github.com/KengChiChang/QSS20_FA25/blob/main/lectures/lec02_20250918/lec02_activity.ipynb
+            slides: https://docs.google.com/presentation/d/1ERNnk7gj1ZGZ2yuUJia7seE49x3Zbvz8dLRMvV2hn4Y/preview
+            lecture: https://github.com/KengChiChang/QSS20_FA25/blob/main/lectures/lec02_20250918/lec02_lecture.ipynb
+            activity: https://github.com/KengChiChang/QSS20_FA25/blob/main/lectures/lec02_20250918/lec02_activity.ipynb
           resources: null
           schedule: null
       - title: "Pandas for data manipulation 1"
         resources:
           lesson:
-            gslides: 
+            slides: 
             notebook: 
           resources: null
           schedule: null
       - title: "Pandas 2 + data visualization"
         resources:
           lesson: 
-            gslides: 
+            slides: 
             notebook:
           resources: null
           schedule: null
       - title: "User-defined functions"
         resources:
           lesson:
-            gslides: 
+            slides: 
             notebook: 
           resources: null
           schedule: null
       - title: "Workflow basics: command line & GitHub"
         resources:
           lesson: 
-            gslides: 
+            slides: 
             notebook:
           resources: null
           schedule: null
       - title: "Reshaping & merging data"
         resources:
           lesson:
-            gslides: 
+            slides: 
             notebook: 
           resources: null
           schedule: null
       - title: "SQL & LaTeX"
         resources:
           lesson: 
-            gslides: 
+            slides: 
             notebook:
           resources: null
           schedule: null
       - title: "Regular expressions (Regex)"
         resources:
           lesson:
-            gslides: 
+            slides: 
             notebook: 
           resources: null
           schedule: null
       - title: "Text as data 1 (text mining)"
         resources:
           lesson: 
-            gslides: 
+            slides: 
             notebook:
           resources: null
           schedule: null
       - title: "Text as data 2 (topic modeling)"
         resources:
           lesson:
-            gslides: 
+            slides: 
             notebook: 
           resources: null
           schedule: null
       - title: "APIs 1 (NAEP & Yelp)"
         resources:
           lesson: 
-            gslides: 
+            slides: 
             notebook:
           resources: null
           schedule: null
       - title: "APIs 2 (ChatGPT)"
         resources:
           lesson:
-            gslides: 
+            slides: 
             notebook: 
           resources: null
           schedule: null
       - title: "Social network visualization"
         resources:
           lesson: 
-            gslides: 
+            slides: 
             notebook:
           resources: null
           schedule: null
       - title: "Supervised machine learning"
         resources:
           lesson:
-            gslides: 
+            slides: 
             notebook: 
           resources: null
           schedule: null
       - title: "Unsupervised machine learning"
         resources:
           lesson: 
-            gslides: 
+            slides: 
             notebook:
           resources: null
           schedule: null

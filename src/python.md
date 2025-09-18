@@ -190,7 +190,7 @@ List kernels to confirm:
 jupyter kernelspec list
 ```
 
-You should see `qss20` (displayed as `Python (QSS20)`).
+You should see `qss20`.
 
 
 ## Install common data science packages
@@ -232,7 +232,7 @@ JupyterLab should open in your browser (or print a local URL like `http://localh
 
 ## Common “it’s not working” fixes
 
-* **`jupyter` not found:** use `python -m jupyterlab`, or reinstall `jupyterlab` in the active env.
+* **`jupyter` not found:** `conda activate qss20` then reinstall `jupyterlab` in the `qss20` environment.
 * **Wrong env active:** `conda info --envs`, then `conda activate qss20`.
 * **Multiple Python installs causing confusion:** check path order:
       - macOS/Linux: `which python` and `which jupyter`
