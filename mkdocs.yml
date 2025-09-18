@@ -3,9 +3,26 @@ site_url: https://kengchichang.github.io/QSS20
 
 docs_dir: src
 
+nav:
+  - 🏡 Home: index.md
+  - 🙋 Logistics:
+    - Course Overview: overview.md
+    - Evaluations & Grading: evaluations.md
+    - Staff / Office Hours: staff/index.md
+    - Tools Overview: tools.md
+  - 💻 System Setup:
+    - Python and conda: python.md
+    - Git and GitHub: git.md
+    - VS Code: vscode.md
+  - 📽️ Final Project:
+    - Overview: project.md
+    - Useful Data Sources: data.md 
+
 theme:
   name: null
   custom_dir: theme
+  features:
+    - navigation.sections
 
   static_templates:
     - 404.html
@@ -21,7 +38,7 @@ theme:
     "📖 Syllabus": https://docs.google.com/document/d/1tWoMG0JoCTQpXIGfXZQwyQxz_gmBQ3p8jzx5zPKqP5g/edit?usp=sharing
 
   external_links_after_nav:
-    "🖥️ DataCamp": https://www.datacamp.com/groups/shared_links/34a82e1044d5b2a52312ab70aa7b024a74c8c58de48813a10491ac407eefaa02
+    "📊 DataCamp": https://www.datacamp.com/groups/shared_links/34a82e1044d5b2a52312ab70aa7b024a74c8c58de48813a10491ac407eefaa02
 
   simple_analytics: false
 
@@ -63,7 +80,6 @@ plugins:
       collections:
         announcements: {}
         staff: {}
-  - auto-nav
   - macros:
       include_dir: includes
       include_yaml:

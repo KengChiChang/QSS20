@@ -14,7 +14,7 @@ schedule:
       - title: "Problem Set 1"
         start: "2025-9-18"
         end: "2025-9-29"
-        url: 
+        url: https://github.com/KengChiChang/QSS20_FA25/tree/e9fce0ac6312efa87f4104e36405302212f0c717/problemsets/pset1
       - title: "Problem Set 2"
         start: "2025-10-2"
         end: "2025-10-13"

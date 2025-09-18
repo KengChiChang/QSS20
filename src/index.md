@@ -202,11 +202,11 @@ dicts are merged recursively; other existing values are not changed
 <!-- !!! info
     Welcome to POLI 179: Special Topics in Political Methodology -- Applied Deep Representation Learning for Social Science. The first class meeting is on Tuesday, April 2nd 6:30–7:50 PM at [Franklin Antonio Hall 1450](https://maps.app.goo.gl/1D9FsWWfe1bGzptE9). -->
 
-QSS 20 is a foundational and required course in the Quantitative Social Science curriculum that equips students with the computing literacy to conduct social science research in the age of “big data.” The skills students learn in QSS 20 are building blocks for data science applications from research to industry to nonprofits and government.
+<!-- QSS 20 is a foundational and required course in the Quantitative Social Science curriculum that equips students with the computing literacy to conduct social science research in the age of “big data.” The skills students learn in QSS 20 are building blocks for data science applications from research to industry to nonprofits and government. -->
 
 <!-- ## Calendar {: .mt-5 } -->
 
-Below is a rough sketch of the quarter and things are subject to change.
+<!-- Below is a rough sketch of the quarter and things are subject to change. -->
 
 {# second pass to output table #}
 {% set active_assignments = namespace(project=none, exercise=none) %}

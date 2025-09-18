@@ -1,5 +1,5 @@
 schedule:
-  start: 2025-9-15 # Shared across all schedule files
+  start: 2025-9-16 # Shared across all schedule files
   start_indices:
     lecture: 1
   dummy_days: # The calendar script needs to know when to make things weekends
@@ -41,26 +41,23 @@ schedule:
           - btn-resource
   weeks:
   lectures:
-    days: ["Mon", "Tue", "Thu"]
+    days: ["Tue", "Thu"]
     default_type: lecture
     entries:
-      - title: ""
-        is_dummy: true
       - title: "Course intro & syllabus review"
         resources:
           lesson:
-            gslides: https://docs.google.com/presentation/d/1qchanW5HfuUvZEIpxSDUDeT57eDd-ay3qvIElXzrbPE/edit?usp=sharing
+            gslides: https://docs.google.com/presentation/d/1qchanW5HfuUvZEIpxSDUDeT57eDd-ay3qvIElXzrbPE/preview
           resources: null
           schedule: null
       - title: "Python basics & software setup"
         resources:
           lesson:
-            gslides: 
-            notebook: 
+            gslides: https://docs.google.com/presentation/d/1ERNnk7gj1ZGZ2yuUJia7seE49x3Zbvz8dLRMvV2hn4Y/preview
+            notebook1: https://github.com/KengChiChang/QSS20_FA25/blob/main/lectures/lec02_20250918/lec02_lecture.ipynb
+            notebook2: https://github.com/KengChiChang/QSS20_FA25/blob/main/lectures/lec02_20250918/lec02_activity.ipynb
           resources: null
           schedule: null
-      - title: ""
-        is_dummy: true
       - title: "Pandas for data manipulation 1"
         resources:
           lesson:
@@ -75,8 +72,6 @@ schedule:
             notebook:
           resources: null
           schedule: null
-      - title: ""
-        is_dummy: true
       - title: "User-defined functions"
         resources:
           lesson:
@@ -91,8 +86,6 @@ schedule:
             notebook:
           resources: null
           schedule: null
-      - title: ""
-        is_dummy: true
       - title: "Reshaping & merging data"
         resources:
           lesson:
@@ -107,8 +100,6 @@ schedule:
             notebook:
           resources: null
           schedule: null
-      - title: ""
-        is_dummy: true
       - title: "Regular expressions (Regex)"
         resources:
           lesson:
@@ -123,8 +114,6 @@ schedule:
             notebook:
           resources: null
           schedule: null
-      - title: ""
-        is_dummy: true
       - title: "Text as data 2 (topic modeling)"
         resources:
           lesson:
@@ -139,8 +128,6 @@ schedule:
             notebook:
           resources: null
           schedule: null
-      - title: ""
-        is_dummy: true
       - title: "APIs 2 (ChatGPT)"
         resources:
           lesson:
@@ -155,8 +142,6 @@ schedule:
             notebook:
           resources: null
           schedule: null
-      - title: ""
-        is_dummy: true
       - title: "Supervised machine learning"
         resources:
           lesson:
@@ -171,8 +156,6 @@ schedule:
             notebook:
           resources: null
           schedule: null
-      - title: ""
-        is_dummy: true
       - title: "Final project work session"
         resources:
           lesson:
@@ -183,13 +166,9 @@ schedule:
           lesson: 
           resources: null
           schedule: null
-      - title: ""
-        is_dummy: true
       - title: "Final presentations"
         resources:
           lesson:
           resources: null
           schedule: null
-      - title: ""
-        is_dummy: true
       
