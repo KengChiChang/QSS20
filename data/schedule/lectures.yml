@@ -52,6 +52,10 @@ schedule:
           schedule: null
       - title: "Python basics & software setup"
         resources:
+          lesson:
+            slides: https://docs.google.com/presentation/d/1ERNnk7gj1ZGZ2yuUJia7seE49x3Zbvz8dLRMvV2hn4Y/preview
+            lecture: https://github.com/KengChiChang/QSS20_FA25/blob/main/lectures/lec02_20250918/lec02_lecture.ipynb
+            activity: https://github.com/KengChiChang/QSS20_FA25/blob/main/lectures/lec02_20250918/lec02_activity.ipynb
           datacamp:
             videos: 
               - url: https://campus.datacamp.com/courses/intro-to-python-for-data-science/chapter-1-python-basics?ex=1
@@ -60,10 +64,6 @@ schedule:
                 name: "Introduction to Python: Python Lists"
               - url: https://campus.datacamp.com/courses/intro-to-python-for-data-science/chapter-3-functions-and-packages?ex=1
                 name: "Introduction to Python: Functions and Packages"
-          lesson:
-            slides: https://docs.google.com/presentation/d/1ERNnk7gj1ZGZ2yuUJia7seE49x3Zbvz8dLRMvV2hn4Y/preview
-            lecture: https://github.com/KengChiChang/QSS20_FA25/blob/main/lectures/lec02_20250918/lec02_lecture.ipynb
-            activity: https://github.com/KengChiChang/QSS20_FA25/blob/main/lectures/lec02_20250918/lec02_activity.ipynb
           resources: null
           schedule: null
       - title: "Pandas for data manipulation 1"
@@ -71,6 +71,14 @@ schedule:
           lesson:
             slides: 
             notebook: 
+          datacamp:
+            videos: 
+              - url: https://www.datacamp.com/courses/data-manipulation-with-pandas
+                name: "Data Manipulation with pandas: Transforming DataFrames"
+              - url: https://www.datacamp.com/courses/data-manipulation-with-pandas
+                name: "Data Manipulation with pandas: Aggregating DataFrames"
+              - url: https://www.datacamp.com/courses/data-manipulation-with-pandas
+                name: "Data Manipulation with pandas: Slicing and Indexing DataFrames"
           resources: null
           schedule: null
       - title: "Pandas 2 + data visualization"
@@ -78,20 +86,34 @@ schedule:
           lesson: 
             slides: 
             notebook:
+          datacamp:
+            videos: 
+              - url: https://www.datacamp.com/courses/data-manipulation-with-pandas
+                name: "Data Manipulation with pandas: Creating and Visualizing DataFrames"
           resources: null
           schedule: null
-      - title: "User-defined functions"
+      - title: "User-defined functions, Workflow: Command line"
         resources:
           lesson:
             slides: 
             notebook: 
+          datacamp:
+            videos: 
+              - url: https://campus.datacamp.com/courses/introduction-to-functions-in-python/writing-your-own-functions?ex=1
+                name: "Writing your own functions"
+              - url: https://www.datacamp.com/courses/introduction-to-shell
+                name: "Introduction to Shell"
           resources: null
           schedule: null
-      - title: "Workflow basics: command line & GitHub"
+      - title: "Workflow: Git & GitHub"
         resources:
           lesson: 
             slides: 
             notebook:
+          datacamp:
+            videos: 
+              - url: https://campus.datacamp.com/courses/introduction-to-github-concepts/introduction-to-github?ex=1
+                name: "Introduction to GitHub"
           resources: null
           schedule: null
       - title: "Reshaping & merging data"
@@ -99,6 +121,12 @@ schedule:
           lesson:
             slides: 
             notebook: 
+          datacamp:
+            videos: 
+              - url: https://campus.datacamp.com/courses/joining-data-with-pandas/data-merging-basics?ex=1
+                name: "Data Merging Basics"
+              - url: https://campus.datacamp.com/courses/joining-data-with-pandas/merging-tables-with-different-join-types?ex=1
+                name: "Merging Tables With Different Join Types"
           resources: null
           schedule: null
       - title: "SQL & LaTeX"
@@ -106,13 +134,23 @@ schedule:
           lesson: 
             slides: 
             notebook:
+          datacamp:
+            videos: 
+              - url: https://www.datacamp.com/courses/introduction-to-sql
+                name: "Introduction to SQL"
           resources: null
           schedule: null
-      - title: "Regular expressions (Regex)"
+      - title: "Reading flat files, Regular expressions (Regex)"
         resources:
           lesson:
             slides: 
             notebook: 
+          datacamp:
+            videos: 
+              - url: https://campus.datacamp.com/courses/streamlined-data-ingestion-with-pandas/importing-data-from-flat-files?ex=1
+                name: "Streamlined Data Ingestion with pandas: Importing Data from Flat Files"
+              - url: https://campus.datacamp.com/courses/regular-expressions-in-python/regular-expressions-for-pattern-matching?ex=1
+                name: "Regular Expressions for Pattern Matching"
           resources: null
           schedule: null
       - title: "Text as data 1 (text mining)"
@@ -120,6 +158,12 @@ schedule:
           lesson: 
             slides: 
             notebook:
+          datacamp:
+            videos: 
+              - url: https://www.datacamp.com/courses/natural-language-processing-nlp-in-python
+                name: "Natural Language Processing (NLP) in Python: Text Processing Fundamentals"
+              - url: https://www.datacamp.com/courses/natural-language-processing-nlp-in-python
+                name: "Natural Language Processing (NLP) in Python: Feature Extraction from Text"
           resources: null
           schedule: null
       - title: "Text as data 2 (topic modeling)"
@@ -127,6 +171,12 @@ schedule:
           lesson:
             slides: 
             notebook: 
+          datacamp:
+            videos: 
+              - url: https://www.datacamp.com/courses/natural-language-processing-nlp-in-python
+                name: "Natural Language Processing (NLP) in Python: Text Classification with Hugging Face"
+              - url: https://www.datacamp.com/courses/natural-language-processing-nlp-in-python
+                name: "Natural Language Processing (NLP) in Python: Token Classification and Text Generation"
           resources: null
           schedule: null
       - title: "APIs 1 (NAEP & Yelp)"
@@ -134,6 +184,12 @@ schedule:
           lesson: 
             slides: 
             notebook:
+          datacamp:
+            videos:
+              - url: https://campus.datacamp.com/courses/streamlined-data-ingestion-with-pandas/importing-json-data-and-working-with-apis?ex=1
+                name: "Streamlined Data Ingestion with pandas: Importing JSON Data and Working with APIs" 
+              - url: https://www.datacamp.com/courses/introduction-to-apis-in-python
+                name: "Introduction to APIs in Python: Making API Requests with Python"
           resources: null
           schedule: null
       - title: "APIs 2 (ChatGPT)"
@@ -141,23 +197,35 @@ schedule:
           lesson:
             slides: 
             notebook: 
-          resources: null
-          schedule: null
-      - title: "Social network visualization"
-        resources:
-          lesson: 
-            slides: 
-            notebook:
+          datacamp:
+            videos: 
+              - url: https://www.datacamp.com/courses/introduction-to-apis-in-python
+                name: "Introduction to APIs in Python: More API request concepts"
           resources: null
           schedule: null
       - title: "Supervised machine learning"
         resources:
-          lesson:
+          lesson: 
             slides: 
-            notebook: 
+            notebook:
+          datacamp:
+            videos: 
+              - url: https://www.datacamp.com/courses/supervised-learning-with-scikit-learn
+                name: "Supervised Learning with scikit-learn"
           resources: null
           schedule: null
       - title: "Unsupervised machine learning"
+        resources:
+          lesson:
+            slides: 
+            notebook: 
+          datacamp:
+            videos: 
+              - url: https://www.datacamp.com/courses/unsupervised-learning-in-python
+                name: "Unsupervised Learning in Python"
+          resources: null
+          schedule: null
+      - title: "Social network visualization"
         resources:
           lesson: 
             slides: 
