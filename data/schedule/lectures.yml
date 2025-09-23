@@ -69,8 +69,8 @@ schedule:
       - title: "Pandas for data manipulation 1"
         resources:
           lesson:
-            slides: 
-            notebook: 
+            slides: https://docs.google.com/presentation/d/1MiAK2oCoH2NKx-wPEHHoIifcc7sqa92qW-v29REXRQk/preview
+            activity: https://github.com/KengChiChang/QSS20_FA25/blob/main/lectures/lec03_20250923/lec03_activity.ipynb
           datacamp:
             videos: 
               - url: https://www.datacamp.com/courses/data-manipulation-with-pandas
