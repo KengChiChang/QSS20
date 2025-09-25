@@ -5,7 +5,7 @@ nav_order: 1000
 
 The content and structure of QSS 20 have been designed and developed over the years thanks to many dedicated faculty and instructors.  The original course materials were created by Rebecca Johnson and Jaren Haber.  Previous iterations of the course has been taught by Herbert Chang.
 
-The content  of the class also draws from many other sources, including the following:
+The content  of the current iteration of the class also draws from many other sources, including the following:
 
 - DSC 10 at UC San Diego, developed by Justin Eldridge, Suraj Rampure, Janine Tiefenbruck, and many others.
 - DSC 80 at UC San Diego, developed by Sam Lau, Tauhidur Rahman, Suraj Rampure, Justin Eldridge, Marina Langlois, and Aaron Fraenkel.
