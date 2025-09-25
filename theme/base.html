@@ -113,8 +113,10 @@
 
                             {%- block nav_footer %}
                             <footer class="mt-auto">
-                                {# {{ config.theme.nav_footer_content | markdown }} #}
-                                {{ config.theme.nav_footer_content }}
+                                {# {{ config.theme.nav_footer_content }} #}
+                                {%- for name, link_url in config.theme.nav_footer_content.items() %}
+                                    <a href="{{ link_url | url }}" class="nav-link">{{ name }}</a>
+                                {%- endfor %}
                             </footer>
                             {%- endblock %}
                         </nav>

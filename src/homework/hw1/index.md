@@ -27,23 +27,56 @@ nav_exclude: true
 
 ### Convert Your Notebook to PDF
 
-Choose one method below:
+First, install the package `nbconvert` into your QSS20 environment:
+
+```bash
+conda activate qss20
+conda install nbconvert
+```
+
+Then, check if you have LaTeX installed on your laptop. You can check if you already have it by running the following in your terminal:
+
+```bash
+which latex
+```
+
+If you got a path (e.g., `/Library/TeX/texbin/latex`, you have it installed.  If not, proceed to the next section.
+
+#### (1) If you already have LaTeX installed on your laptop
+
 
 1. Jupyter Lab built-in
     - `File → Save and Export Notebook As → PDF`  
-    - (If you see LaTeX errors, use one of the alternatives below.)
-2. VS Code
-    - `... → Export → PDF` (or press `Cmd+Shift+P` (Mac)/ `Ctrl+Shift+P` (Windows) and select `Jupyter: Export to PDF`).
-3. Command line (`nbconvert`)
-    - HTML → Browser → Print as PDF (no LaTeX needed but code can get cut off):
+2. Command line (`nbconvert`)
+    ```bash
+    jupyter nbconvert --to pdf your_notebook.ipynb
+    ```
+
+#### (2) If you do NOT have LaTeX installed on your laptop
+
+LaTeX installation can be large (we will mostly work in [Overleaf](https://www.overleaf.com/), which is LaTex hosted on the cloud instead of your machine for your final project report, so it is not required to install locally), we recommend one of the following two alternative methods below:
+
+1. Use `nbconvert` to convert to webpdf format, bypassing LaTeX:
+   - First, install the required packages in your Terminal:
         ```bash
-        jupyter nbconvert --to html your_notebook.ipynb
-        # then open the generated .html in a browser and Print → Save as PDF
+        conda activate qss20
+        conda install nbconvert-webpdf
         ```
-    - Direct PDF (requires LaTeX):
+        After sucessfully installing `nbconvert-webpdf`, run:
+        ```
+        playwright install chromium
+        ```
+        Lastly, run the following to convert your notebook to `webpdf` format:
         ```bash
-        jupyter nbconvert --to pdf your_notebook.ipynb
+        jupyter nbconvert --to webpdf your_notebook.ipynb
         ```
+        This will create `your_notebook.pdf` without installing LaTeX.
+2. Use `nbconvert` to convert to HTML first:
+    ```bash
+    jupyter nbconvert --to html your_notebook.ipynb
+    ```
+    then open the generated `your_notebook.html` in a browser and click Print → Save as PDF
+
 
 Before moving on: confirm the PDF shows all code, text, and output.
 

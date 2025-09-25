@@ -84,8 +84,8 @@ schedule:
       - title: "Pandas 2 + data visualization"
         resources:
           lesson: 
-            slides: 
-            notebook:
+            slides: https://docs.google.com/presentation/d/17miw22hTU7r0vUnjmUnq1Ne7FpsH8MOEoRvx6JvST8o/preview
+            activity: https://github.com/KengChiChang/QSS20_FA25/blob/main/lectures/lec04_20250925/lec04_activity.ipynb
           datacamp:
             videos: 
               - url: https://www.datacamp.com/courses/data-manipulation-with-pandas
