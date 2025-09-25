@@ -11,6 +11,7 @@ nav_exclude: true
 
 ## Corrections & Clarifications
 
+- **1.1**: Print the mean and median number of charges per case.
 - **1.2.2**: Try to do so efficiently (e.g., write a function and apply to a column, rather than edit the variable repeatedly in separate line for each recoded offense)
 - **1.3**: Create `sentenceymd_derived` that's a version of `SENTENCE_DATE` converted to datetime format. Also create a rounded version, `sentenceym_derived`, that's rounded down to the first day of the month (e.g., `1/5/2016` would become `1/1/2016` and `3/27/2018` would become `3/1/2018`)
 
