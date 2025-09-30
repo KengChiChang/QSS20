@@ -8,9 +8,9 @@ schedule:
     default_type: project
     entries:
       - title: "Project preference survey"
-        url: 
+        url: https://forms.gle/YCFuS2oHbv9q8KGH6
         start: "2025-9-30"
-        end: "2025-10-14"
+        end: "2025-10-07"
       - title: "Final project milestone 1"
         url: 
         start: "2025-10-14"

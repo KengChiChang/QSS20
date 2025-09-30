@@ -94,9 +94,10 @@ schedule:
           schedule: null
       - title: "User-defined functions, Workflow: Command line"
         resources:
-          lesson:
-            slides: 
-            notebook: 
+          lesson: 
+            slides: https://docs.google.com/presentation/d/1Jija2nNCz_T8i_vr81o-xCgb1D4_Cn7fH01vgUjnx6s/preview
+            lecture: https://github.com/KengChiChang/QSS20_FA25/blob/main/lectures/lec05_20250930/lec05_lecture.ipynb
+            activity: https://github.com/KengChiChang/QSS20_FA25/blob/main/lectures/lec05_20250930/lec05_activity.ipynb
           datacamp:
             videos: 
               - url: https://campus.datacamp.com/courses/introduction-to-functions-in-python/writing-your-own-functions?ex=1
