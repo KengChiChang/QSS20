@@ -42,7 +42,7 @@ This guide covers three supported methods. Pick one per machine:
 
 **When to use:** You want to use the command line without SSH keys.
 
-**What it does:** Uses HTTPS for Git operations; Git stores your token via a credential helper (system keychain on macOS, **Git Credential Manager** on Windows).
+**What it does:** Uses HTTPS for Git operations; Git stores your token via a credential helper (system keychain on macOS, Git Credential Manager on Windows).
 
 ### Steps
 
