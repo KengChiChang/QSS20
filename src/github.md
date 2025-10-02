@@ -49,19 +49,23 @@ This guide covers three supported methods. Pick one per machine:
 1. **Create a Personal Access Token** on GitHub
 
    * Go to **GitHub → Settings → Developer settings → Personal access tokens**
-   * Prefer **Fine-grained tokens** (scope only the repos you need)
-   * For classic tokens, the minimal scope for private repos is usually `repo`.
-2. Make sure your repo remote uses **HTTPS**:
+   * Select **Tokens (classic)** → **Generate new token (classic)**
+   * Give this token a name (usally the nickname of your computer)
+   * Set an expiration date if you want to, or "No expiration" so you can keep access forever on this computer
+   * Set the cope to `repo` for usuall read/write access to any of your public/private repo
 
+2. Make sure your repo remote uses **HTTPS**:
    ```bash
    git remote -v
    # If needed:
    git remote set-url origin https://github.com/USERNAME/REPO.git
    ```
+
 3. On first `git push`/`git pull`, Git will prompt:
 
    * **Username:** your GitHub username
    * **Password:** paste the **PAT** (not your GitHub password)
+
 4. Git will cache the token via a credential helper:
 
    * macOS: `git config --global credential.helper osxkeychain`
@@ -88,51 +92,69 @@ No further prompts = token is cached correctly.
 ### Steps
 
 1. **Check for existing keys**:
-
    ```bash
    ls -al ~/.ssh
    # Look for id_ed25519 and id_ed25519.pub (preferred) or id_rsa / id_rsa.pub
    ```
-2. **Generate a new key** (use Ed25519):
 
+2. **Generate a new key** (use Ed25519):
    ```bash
    ssh-keygen -t ed25519 -C "your_email@example.com"
    # Press Enter to accept default path; add a passphrase for security
    ```
+
 3. **Start and load into ssh-agent**
 
    * macOS / Linux:
-
      ```bash
      eval "$(ssh-agent -s)"
      ssh-add ~/.ssh/id_ed25519
      ```
+
    * Windows (Git Bash / PowerShell, OpenSSH Agent running):
-
      ```bash
      eval "$(ssh-agent -s)"
      ssh-add ~/.ssh/id_ed25519
      ```
-4. **Add the public key to GitHub**
 
+4. **Add the public key to GitHub**
    ```bash
    pbcopy < ~/.ssh/id_ed25519.pub   # macOS
    # or: clip < ~/.ssh/id_ed25519.pub  # Windows (PowerShell)
    # or: cat ~/.ssh/id_ed25519.pub | xclip -selection clipboard  # Linux
    ```
 
-   * GitHub → **Settings → SSH and GPG keys → New SSH key** → paste.
-5. **Switch the repo remote to SSH**:
+   * GitHub → **Settings → SSH and GPG keys → New SSH key**
+   * Give it a title, usally the nickname of your computer
+   * Select Authentication Key
+   * Paste into Key field, you should see something like `ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAI...`
 
+5. **Switch the repo remote to SSH**:
    ```bash
    git remote set-url origin git@github.com:USERNAME/REPO.git
    ```
-6. **Test the connection**:
 
+6. **Test the connection**:
    ```bash
    ssh -T git@github.com
-   # Expect: "Hi USERNAME! You've successfully authenticated..."
    ```
+
+   * For the very first time of your ssh connection to GitHub, you should see something like:
+     ```
+     The authenticity of host 'github.com (140.82.xx.xx)' can't be established.
+     ED25519 key fingerprint is SHA256:<fingerprint>.
+     Are you sure you want to continue connecting (yes/no/[fingerprint])?
+     ```
+   * Type `yes` to continue. You should see:
+     ```
+     Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
+     ```
+       * This writes an entry to `~/.ssh/known_hosts` so you won’t be prompted again on this machine.
+   * Then you should see:
+     ```
+     Hi <Your-GitHub-Username>! You've successfully authenticated, but GitHub does not provide shell access.
+     ```
+
 
 ### Verify
 
