@@ -109,8 +109,8 @@ schedule:
       - title: "Workflow: Git & GitHub"
         resources:
           lesson: 
-            slides: 
-            notebook:
+            slides: https://docs.google.com/presentation/d/1hghUowBxN2TQY50smDqRk15LKHnOyk09xda_rSo9lbI/preview
+            activity: https://github.com/KengChiChang/QSS20_FA25/blob/main/lectures/lec05_20250930/lec05_activity.ipynb
           datacamp:
             videos: 
               - url: https://campus.datacamp.com/courses/introduction-to-github-concepts/introduction-to-github?ex=1
@@ -130,18 +130,7 @@ schedule:
                 name: "Merging Tables With Different Join Types"
           resources: null
           schedule: null
-      - title: "SQL & LaTeX"
-        resources:
-          lesson: 
-            slides: 
-            notebook:
-          datacamp:
-            videos: 
-              - url: https://www.datacamp.com/courses/introduction-to-sql
-                name: "Introduction to SQL"
-          resources: null
-          schedule: null
-      - title: "Reading flat files, Regular expressions (Regex)"
+      - title: "Regular expressions, Project Speed Dating"
         resources:
           lesson:
             slides: 
@@ -152,6 +141,17 @@ schedule:
                 name: "Streamlined Data Ingestion with pandas: Importing Data from Flat Files"
               - url: https://campus.datacamp.com/courses/regular-expressions-in-python/regular-expressions-for-pattern-matching?ex=1
                 name: "Regular Expressions for Pattern Matching"
+          resources: null
+          schedule: null
+      - title: "SQL & LaTeX"
+        resources:
+          lesson: 
+            slides: 
+            notebook:
+          datacamp:
+            videos: 
+              - url: https://www.datacamp.com/courses/introduction-to-sql
+                name: "Introduction to SQL"
           resources: null
           schedule: null
       - title: "Text as data 1 (text mining)"
@@ -248,4 +248,8 @@ schedule:
           lesson:
           resources: null
           schedule: null
+      - title: ""
+        is_dummy: true
+      - title: ""
+        is_dummy: true
       

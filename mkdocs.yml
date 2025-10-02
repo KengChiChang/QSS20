@@ -12,8 +12,9 @@ nav:
     - Tools Overview: tools.md
   - 💻 System Setup:
     - Python and conda: python.md
-    - Git and GitHub: git.md
     - VS Code: vscode.md
+    - Install Git: git.md
+    - Authenticate GitHub: github.md
   - 📽️ Final Project:
     - Overview: project.md
     - Useful Data Sources: data.md 

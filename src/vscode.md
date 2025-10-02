@@ -1,6 +1,6 @@
 ---
 title: "Setup IDE (VS Code)"
-# nav_order: 106
+nav_order: 106
 extra_javascript: ["assets/mermaid-10.8.0.min.js"]
 ---
 
