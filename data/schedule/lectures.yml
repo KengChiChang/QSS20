@@ -120,8 +120,9 @@ schedule:
       - title: "Reshaping & merging data"
         resources:
           lesson:
-            slides: 
-            notebook: 
+            slides: https://docs.google.com/presentation/d/1aAcDlVEXh8YGPKicIT0yOEwB4CP2Xj6nXIJjQK4qwPM/preview
+            lecture: https://github.com/KengChiChang/QSS20_FA25/blob/main/lectures/lec06_20251007/lec06_lecture.ipynb
+            activity: https://github.com/KengChiChang/QSS20_FA25/blob/main/lectures/lec06_20251007/lec06_activity.ipynb
           datacamp:
             videos: 
               - url: https://campus.datacamp.com/courses/joining-data-with-pandas/data-merging-basics?ex=1
