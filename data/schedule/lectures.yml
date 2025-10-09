@@ -131,11 +131,12 @@ schedule:
                 name: "Merging Tables With Different Join Types"
           resources: null
           schedule: null
-      - title: "Regular expressions, Project Speed Dating"
+      - title: "Regular expressions, Project Team Matching"
         resources:
           lesson:
-            slides: 
-            notebook: 
+            slides: https://docs.google.com/presentation/d/12ZTxnTDRs53TRrJxgTyy5ZNPIEMVlbwbnSdy696jRyg/preview
+            lecture: https://github.com/KengChiChang/QSS20_FA25/blob/main/lectures/lec07_20251009/lec07_lecture.ipynb
+            activity: https://github.com/KengChiChang/QSS20_FA25/blob/main/lectures/lec07_20251009/lec07_activity.ipynb
           datacamp:
             videos: 
               - url: https://campus.datacamp.com/courses/streamlined-data-ingestion-with-pandas/importing-data-from-flat-files?ex=1
