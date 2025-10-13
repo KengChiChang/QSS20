@@ -11,7 +11,7 @@ nav_exclude: true
 
 ## Corrections & Clarifications
 
-Will be posted here, if any.
+- **2.1**: Loading the `jobs.csv` data stored in `pset2_inputdata`
 
 
 ## How to Submit
