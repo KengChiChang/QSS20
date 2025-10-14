@@ -147,9 +147,10 @@ schedule:
           schedule: null
       - title: "SQL & LaTeX"
         resources:
-          lesson: 
-            slides: 
-            notebook:
+          lesson:
+            slides: https://docs.google.com/presentation/d/11Wi6ZKaFJ7aKIhQTaS9Xp63hq1Fvgo9OogbZoYT2-p0/preview
+            lecture: https://github.com/KengChiChang/QSS20_FA25/blob/main/lectures/lec08_20251014/lec08_lecture.ipynb
+            activity: https://github.com/KengChiChang/QSS20_FA25/blob/main/lectures/lec08_20251014/lec08_activity.ipynb
           datacamp:
             videos: 
               - url: https://www.datacamp.com/courses/introduction-to-sql
