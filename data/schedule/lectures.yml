@@ -159,9 +159,10 @@ schedule:
           schedule: null
       - title: "Text as data 1 (text mining)"
         resources:
-          lesson: 
-            slides: 
-            notebook:
+          lesson:
+            slides: https://docs.google.com/presentation/d/1H_wrsxsbQNB3zyzrwPzQe-B0KUd6BPAHnREgAQ36_kI/preview
+            lecture: https://github.com/KengChiChang/QSS20_FA25/blob/main/lectures/lec10_20251016/lec10_lecture.ipynb
+            activity: https://github.com/KengChiChang/QSS20_FA25/blob/main/lectures/lec10_20251016/lec10_activity.ipynb
           datacamp:
             videos: 
               - url: https://www.datacamp.com/courses/natural-language-processing-nlp-in-python

@@ -34,7 +34,13 @@ schedule:
       - title: "Problem Set 3"
         start: "2025-10-16"
         end: "2025-10-27"
-        url: 
+        url: /homework/hw3/index.md
+        files: 
+          "GitHub Repo Directory": https://github.com/KengChiChang/QSS20_FA25/tree/main/problemsets/pset3
+        points: 10
+        submit:
+          "Gradescope": https://www.gradescope.com/courses/1132872
+        group: "Groups of 1-3"
       - title: "Problem Set 4"
         start: "2025-10-30"
         end: "2025-11-10"
