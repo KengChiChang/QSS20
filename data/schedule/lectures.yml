@@ -174,8 +174,9 @@ schedule:
       - title: "Text as data 2 (topic modeling)"
         resources:
           lesson:
-            slides: 
-            notebook: 
+            slides: https://docs.google.com/presentation/d/1B6XaA9-pWULaM7_Pd2nSTZYhx0QyUbQY5PDVTmzWNc8/preview
+            lecture: https://github.com/KengChiChang/QSS20_FA25/blob/main/lectures/lec11_20251021/lec11_lecture.ipynb
+            activity: https://github.com/KengChiChang/QSS20_FA25/blob/main/lectures/lec11_20251021/lec11_activity.ipynb
           datacamp:
             videos: 
               - url: https://www.datacamp.com/courses/natural-language-processing-nlp-in-python
