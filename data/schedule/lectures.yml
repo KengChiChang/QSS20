@@ -185,11 +185,12 @@ schedule:
                 name: "Natural Language Processing (NLP) in Python: Token Classification and Text Generation"
           resources: null
           schedule: null
-      - title: "APIs 1 (NAEP & Yelp)"
+      - title: "APIs 1"
         resources:
-          lesson: 
-            slides: 
-            notebook:
+          lesson:
+            slides: https://docs.google.com/presentation/d/1O2ytogXEhb1Wt0sVMCe9eqY5tcrl8M1V-gmnCoC29lo/preview
+            lecture: https://github.com/KengChiChang/QSS20_FA25/blob/main/lectures/lec12_20251023/lec12_lecture.ipynb
+            activity: https://github.com/KengChiChang/QSS20_FA25/blob/main/lectures/lec12_20251023/lec12_activity.ipynb
           datacamp:
             videos:
               - url: https://campus.datacamp.com/courses/streamlined-data-ingestion-with-pandas/importing-json-data-and-working-with-apis?ex=1
@@ -198,7 +199,7 @@ schedule:
                 name: "Introduction to APIs in Python: Making API Requests with Python"
           resources: null
           schedule: null
-      - title: "APIs 2 (ChatGPT)"
+      - title: "APIs 2"
         resources:
           lesson:
             slides: 
