@@ -199,11 +199,11 @@ schedule:
                 name: "Introduction to APIs in Python: Making API Requests with Python"
           resources: null
           schedule: null
-      - title: "APIs 2"
+      - title: "APIs 2 & web scraping"
         resources:
           lesson:
-            slides: 
-            notebook: 
+            slides: https://docs.google.com/presentation/d/1c4g0Gu1ErWS8hbwyHkPLkaXXoBrciMCZQJng3vOCB6Q/preview
+            lecture: https://github.com/KengChiChang/QSS20_FA25/blob/main/lectures/lec13_20251028/lec13_lecture.ipynb
           datacamp:
             videos: 
               - url: https://www.datacamp.com/courses/introduction-to-apis-in-python
@@ -232,11 +232,9 @@ schedule:
                 name: "Unsupervised Learning in Python"
           resources: null
           schedule: null
-      - title: "Social network visualization"
+      - title: "Final project work session"
         resources:
           lesson: 
-            slides: 
-            notebook:
           resources: null
           schedule: null
       - title: "Final project work session"

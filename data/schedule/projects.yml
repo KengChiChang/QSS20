@@ -17,11 +17,11 @@ schedule:
         end: "2025-10-28"
       - title: "Final project milestone 2"
         url: 
-        start: "2025-10-28"
+        start: "2025-10-30"
         end: "2025-11-11"
       - title: "Final project presentation"
         url: 
-        start: "2025-11-13"
+        start: "2025-11-11"
         end: "2025-11-18"
       - title: "Final report Submission"
         url: 
