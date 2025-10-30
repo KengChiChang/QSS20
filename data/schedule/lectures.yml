@@ -215,6 +215,7 @@ schedule:
           lesson:
             slides: https://docs.google.com/presentation/d/1ZQp3sQUKPhfyHmhc7H29KDBSOwh-liqbAQkwvAMdQgc/preview
             lecture: https://github.com/KengChiChang/QSS20_FA25/blob/main/lectures/lec14_20251030/lec14_lecture.ipynb
+            activity: https://github.com/KengChiChang/QSS20_FA25/blob/main/lectures/lec14_20251030/lec14_activity.ipynb
           datacamp:
             videos: 
               - url: https://www.datacamp.com/courses/supervised-learning-with-scikit-learn
