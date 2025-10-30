@@ -212,9 +212,9 @@ schedule:
           schedule: null
       - title: "Supervised machine learning"
         resources:
-          lesson: 
-            slides: 
-            notebook:
+          lesson:
+            slides: https://docs.google.com/presentation/d/1ZQp3sQUKPhfyHmhc7H29KDBSOwh-liqbAQkwvAMdQgc/preview
+            lecture: https://github.com/KengChiChang/QSS20_FA25/blob/main/lectures/lec14_20251030/lec14_lecture.ipynb
           datacamp:
             videos: 
               - url: https://www.datacamp.com/courses/supervised-learning-with-scikit-learn
