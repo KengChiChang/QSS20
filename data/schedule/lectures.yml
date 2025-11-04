@@ -225,8 +225,9 @@ schedule:
       - title: "Unsupervised machine learning"
         resources:
           lesson:
-            slides: 
-            notebook: 
+            slides: https://docs.google.com/presentation/d/1kIhQg-HBwQtnVxxU1wpsm6xcH06WsxfzcoY3MdU2xyg/preview
+            lecture: https://github.com/KengChiChang/QSS20_FA25/blob/main/lectures/lec15_20251104/lec15_lecture.ipynb
+            activity: https://github.com/KengChiChang/QSS20_FA25/blob/main/lectures/lec15_20251104/lec15_activity.ipynb
           datacamp:
             videos: 
               - url: https://www.datacamp.com/courses/unsupervised-learning-in-python
