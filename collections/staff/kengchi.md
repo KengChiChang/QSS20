@@ -5,8 +5,7 @@ email: kengchichang@dartmouth.edu
 pronouns: he/him
 photo: kengchi.jpg
 oh:
-    - Wed 3:30-4pm
-    - Fri 3:30-4pm
+    - Wed 5:30-6:20pm
     - Silsby 123
 ---
 
