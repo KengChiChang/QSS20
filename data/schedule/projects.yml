@@ -8,22 +8,22 @@ schedule:
     default_type: project
     entries:
       - title: "Project preference survey"
-        url: https://forms.gle/YCFuS2oHbv9q8KGH6
-        start: "2025-9-30"
-        end: "2025-10-07"
+        url: NA
+        start: "2026-1-20"
+        end: "2026-1-27"
       - title: "Final project milestone 1"
-        url: https://www.overleaf.com/read/vqgwrgzdwvpv#bfb476
-        start: "2025-10-16"
-        end: "2025-10-28"
+        url: NA
+        start: "2026-2-3"
+        end: "2026-2-11"
       - title: "Final project milestone 2"
-        url: https://www.overleaf.com/read/dyccvjfqtyhj#f919f9
-        start: "2025-10-30"
-        end: "2025-11-11"
+        url: NA
+        start: "2026-2-17"
+        end: "2026-2-25"
       - title: "Final project presentation"
-        url: https://docs.google.com/presentation/d/1fsP1939ighjrFJj-AchufLNNPpgUezSlgYtjwXeXiPw/edit?usp=sharing
-        start: "2025-11-11"
-        end: "2025-11-18"
+        url: NA
+        start: "2026-3-5"
+        end: "2026-3-10"
       - title: "Final report Submission"
-        url: https://www.overleaf.com/read/wbqpfzkhjjxk#3bfdf5
-        start: "2025-11-18"
-        end: "2025-11-25"
+        url: NA
+        start: "2026-3-10"
+        end: "2026-3-16"

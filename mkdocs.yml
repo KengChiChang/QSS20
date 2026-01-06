@@ -39,9 +39,9 @@ theme:
     "📖 Syllabus": https://docs.google.com/document/d/1tWoMG0JoCTQpXIGfXZQwyQxz_gmBQ3p8jzx5zPKqP5g/edit?usp=sharing
 
   external_links_after_nav:
-    "💬 Slack": https://dart-prd-lti-74464.slack.com
+    "💬 Slack": https://dart-prd-lti-76623.slack.com
     "📊 DataCamp": https://www.datacamp.com/groups/shared_links/34a82e1044d5b2a52312ab70aa7b024a74c8c58de48813a10491ac407eefaa02
-    "💯 Gradescope": https://www.gradescope.com/courses/1132872
+    "💯 Gradescope": https://www.gradescope.com/courses/1212616
   
   nav_footer_content: 
     "Acknowledgements": acknowledgements.md
