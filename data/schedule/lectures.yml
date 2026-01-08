@@ -44,18 +44,18 @@ schedule:
     days: ["Tue", "Thu"]
     default_type: lecture
     entries:
-      - title: "Course intro & syllabus review"
+      - title: "Course Intro, Syllabus Review"
         resources:
           lesson:
-            slides: https://docs.google.com/presentation/d/1qchanW5HfuUvZEIpxSDUDeT57eDd-ay3qvIElXzrbPE/preview
+            slides: https://docs.google.com/presentation/d/1U8V6PYxG4NrW27xnog5oqFhOLyAnih5S208xTt7UMfg/preview
           resources: null
           schedule: null
-      - title: "Python basics & software setup"
+      - title: "Software Setup, Python Basics"
         resources:
           lesson:
-            slides: https://docs.google.com/presentation/d/1ERNnk7gj1ZGZ2yuUJia7seE49x3Zbvz8dLRMvV2hn4Y/preview
-            lecture: https://github.com/KengChiChang/QSS20_FA25/blob/main/lectures/lec02_20250918/lec02_lecture.ipynb
-            activity: https://github.com/KengChiChang/QSS20_FA25/blob/main/lectures/lec02_20250918/lec02_activity.ipynb
+            slides: https://docs.google.com/presentation/d/1lPvf4MmQ6_C4_iTBEvYRcKFZ1GF4mpYl9K4eoLbBwj0/preview
+            lecture: https://github.com/KengChiChang/QSS20_WI26/blob/main/lectures/lec02/lec02_lecture.ipynb
+            activity: https://github.com/KengChiChang/QSS20_WI26/blob/main/lectures/lec02/lec02_activity.ipynb
           datacamp:
             videos: 
               - url: https://campus.datacamp.com/courses/intro-to-python-for-data-science/chapter-1-python-basics?ex=1
@@ -66,7 +66,7 @@ schedule:
                 name: "Introduction to Python: Functions and Packages"
           resources: null
           schedule: null
-      - title: "Pandas for data manipulation 1"
+      - title: "Pandas for Data Manipulation 1"
         resources:
           lesson:
             slides: https://docs.google.com/presentation/d/1MiAK2oCoH2NKx-wPEHHoIifcc7sqa92qW-v29REXRQk/preview
@@ -81,7 +81,7 @@ schedule:
                 name: "Data Manipulation with pandas: Slicing and Indexing DataFrames"
           resources: null
           schedule: null
-      - title: "Pandas 2 + data visualization"
+      - title: "Pandas 2, Data Visualization"
         resources:
           lesson: 
             slides: https://docs.google.com/presentation/d/17miw22hTU7r0vUnjmUnq1Ne7FpsH8MOEoRvx6JvST8o/preview
@@ -92,7 +92,7 @@ schedule:
                 name: "Data Manipulation with pandas: Creating and Visualizing DataFrames"
           resources: null
           schedule: null
-      - title: "User-defined functions, Workflow: Command line"
+      - title: "Writing Functions, Workflow: Command line"
         resources:
           lesson: 
             slides: https://docs.google.com/presentation/d/1Jija2nNCz_T8i_vr81o-xCgb1D4_Cn7fH01vgUjnx6s/preview
@@ -117,7 +117,7 @@ schedule:
                 name: "Introduction to GitHub"
           resources: null
           schedule: null
-      - title: "Reshaping & merging data"
+      - title: "Reshaping & Merging Data"
         resources:
           lesson:
             slides: https://docs.google.com/presentation/d/1aAcDlVEXh8YGPKicIT0yOEwB4CP2Xj6nXIJjQK4qwPM/preview
@@ -131,7 +131,7 @@ schedule:
                 name: "Merging Tables With Different Join Types"
           resources: null
           schedule: null
-      - title: "Regular expressions, Project Team Matching"
+      - title: "Regular Expressions, Project Team Matching"
         resources:
           lesson:
             slides: https://docs.google.com/presentation/d/12ZTxnTDRs53TRrJxgTyy5ZNPIEMVlbwbnSdy696jRyg/preview
@@ -145,19 +145,7 @@ schedule:
                 name: "Regular Expressions for Pattern Matching"
           resources: null
           schedule: null
-      - title: "SQL & LaTeX"
-        resources:
-          lesson:
-            slides: https://docs.google.com/presentation/d/11Wi6ZKaFJ7aKIhQTaS9Xp63hq1Fvgo9OogbZoYT2-p0/preview
-            lecture: https://github.com/KengChiChang/QSS20_FA25/blob/main/lectures/lec08_20251014/lec08_lecture.ipynb
-            activity: https://github.com/KengChiChang/QSS20_FA25/blob/main/lectures/lec08_20251014/lec08_activity.ipynb
-          datacamp:
-            videos: 
-              - url: https://www.datacamp.com/courses/introduction-to-sql
-                name: "Introduction to SQL"
-          resources: null
-          schedule: null
-      - title: "Text as data 1 (text mining)"
+      - title: "Text as Data 1 (Text Mining)"
         resources:
           lesson:
             slides: https://docs.google.com/presentation/d/1H_wrsxsbQNB3zyzrwPzQe-B0KUd6BPAHnREgAQ36_kI/preview
@@ -171,7 +159,7 @@ schedule:
                 name: "Natural Language Processing (NLP) in Python: Feature Extraction from Text"
           resources: null
           schedule: null
-      - title: "Text as data 2 (topic modeling)"
+      - title: "Text as Data 2 (Topic Modeling)"
         resources:
           lesson:
             slides: https://docs.google.com/presentation/d/1B6XaA9-pWULaM7_Pd2nSTZYhx0QyUbQY5PDVTmzWNc8/preview
@@ -199,7 +187,7 @@ schedule:
                 name: "Introduction to APIs in Python: Making API Requests with Python"
           resources: null
           schedule: null
-      - title: "APIs 2 & web scraping"
+      - title: "APIs 2 & Web Scraping"
         resources:
           lesson:
             slides: https://docs.google.com/presentation/d/1c4g0Gu1ErWS8hbwyHkPLkaXXoBrciMCZQJng3vOCB6Q/preview
@@ -210,7 +198,19 @@ schedule:
                 name: "Introduction to APIs in Python: More API request concepts"
           resources: null
           schedule: null
-      - title: "Supervised machine learning"
+      - title: "SQL & LaTeX"
+        resources:
+          lesson:
+            slides: https://docs.google.com/presentation/d/11Wi6ZKaFJ7aKIhQTaS9Xp63hq1Fvgo9OogbZoYT2-p0/preview
+            lecture: https://github.com/KengChiChang/QSS20_FA25/blob/main/lectures/lec08_20251014/lec08_lecture.ipynb
+            activity: https://github.com/KengChiChang/QSS20_FA25/blob/main/lectures/lec08_20251014/lec08_activity.ipynb
+          datacamp:
+            videos: 
+              - url: https://www.datacamp.com/courses/introduction-to-sql
+                name: "Introduction to SQL"
+          resources: null
+          schedule: null
+      - title: "Supervised Machine Learning"
         resources:
           lesson:
             slides: https://docs.google.com/presentation/d/1ZQp3sQUKPhfyHmhc7H29KDBSOwh-liqbAQkwvAMdQgc/preview
@@ -222,7 +222,7 @@ schedule:
                 name: "Supervised Learning with scikit-learn"
           resources: null
           schedule: null
-      - title: "Unsupervised machine learning"
+      - title: "Unsupervised Machine Learning"
         resources:
           lesson:
             slides: https://docs.google.com/presentation/d/1kIhQg-HBwQtnVxxU1wpsm6xcH06WsxfzcoY3MdU2xyg/preview
